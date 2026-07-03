@@ -15,7 +15,7 @@ const Hero = () => {
             className="text-white text-xl tracking-tighter font-bold"
             style={{ fontFamily: "'Syncopate', sans-serif" }}
           >
-            A.
+            Asc.
           </div>
           <ul className="hidden md:flex gap-12 text-[10px] tracking-[0.4em] uppercase text-white/40">
             {navItems.map((item) => (
