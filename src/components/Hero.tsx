@@ -5,8 +5,9 @@ const navItems = ["Thinking", "Work", "Journey", "Resume"];
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-[#050505] overflow-hidden selection:bg-white selection:text-black">
+    <div className="min-h-screen w-full flex items-center justify-center overflow-hidden selection:bg-white selection:text-black">
       <div className="relative w-full max-w-[1600px] min-h-screen flex flex-col justify-between p-8 md:p-16">
+
         {/* Cinematic Navigation */}
         <nav
           className="relative z-50 flex justify-between items-center w-full reveal-soft"
@@ -107,29 +108,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Portrait — oversized, free-floating, printed into the poster */}
-          <div
-            aria-hidden
-            className="absolute -bottom-[18%] -right-[12%] md:-right-[8%] w-[95%] md:w-[80%] lg:w-[72%] xl:w-[68%] h-[135%] z-10 pointer-events-none reveal-portrait"
-          >
-            <img
-              src={portrait}
-              alt=""
-              className="absolute inset-0 w-full h-full object-contain object-bottom grayscale contrast-[1.15] brightness-[0.95]"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
-                maskImage:
-                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
-              }}
-              draggable={false}
-            />
-
-            {/* Fade portrait into background */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/30 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/40 via-transparent to-transparent" />
-          </div>
         </div>
 
 
@@ -159,11 +137,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Global vignette */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-70 bg-[radial-gradient(ellipse_at_center,transparent_0%,#000_100%)]"
-        />
       </div>
     </div>
   );
