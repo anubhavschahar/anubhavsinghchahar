@@ -1,4 +1,4 @@
-import portraitAsset from "@/assets/anubhav-photo.jpeg.asset.json";
+import portraitAsset from "@/assets/anubhav-photo-2.jpeg.asset.json";
 const portrait = portraitAsset.url;
 
 const navItems = ["Thinking", "Work", "Journey", "Resume"];
