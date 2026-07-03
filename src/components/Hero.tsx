@@ -47,7 +47,7 @@ const Hero = () => {
               </p>
 
               <h1
-                className="reveal-line font-bold text-[22vw] md:text-[19vw] lg:text-[17vw] leading-[0.82] tracking-[-0.09em] text-white"
+                className="reveal-line font-bold text-[18vw] md:text-[15vw] lg:text-[13vw] leading-[0.82] tracking-[-0.09em] text-white"
                 style={{
                   fontFamily: "'Syncopate', sans-serif",
                   animationDelay: "0.4s",
