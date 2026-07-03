@@ -5,8 +5,9 @@ const navItems = ["Thinking", "Work", "Journey", "Resume"];
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-[#050505] overflow-hidden selection:bg-white selection:text-black">
+    <div className="min-h-screen w-full flex items-center justify-center overflow-hidden selection:bg-white selection:text-black">
       <div className="relative w-full max-w-[1600px] min-h-screen flex flex-col justify-between p-8 md:p-16">
+
         {/* Cinematic Navigation */}
         <nav
           className="relative z-50 flex justify-between items-center w-full reveal-soft"
