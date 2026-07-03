@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 const thinkingEntries = [
   {
     title: "Why I care about product thinking",
@@ -48,6 +50,18 @@ const writings = [
   "A product without a point of view is just a form with better spacing.",
 ];
 
+// Subtle gradient overlay between scenes — creates depth without moving the fixed background.
+const SceneDivider = () => (
+  <div
+    aria-hidden
+    className="pointer-events-none w-full h-40 md:h-56"
+    style={{
+      background:
+        "linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,0.35) 50%, rgba(5,5,5,0) 100%)",
+    }}
+  />
+);
+
 const Section = ({
   id,
   eyebrow,
@@ -61,196 +75,230 @@ const Section = ({
 }) => (
   <section
     id={id}
-    className="relative w-full px-8 md:px-16 py-32 md:py-48 bg-[#050505] text-white"
+    className="relative w-full px-8 md:px-16 py-40 md:py-64"
+    style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
   >
     <div className="max-w-[1200px] mx-auto">
       {eyebrow && (
-        <div
-          className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-8"
-          style={{ fontFamily: "'Inter', sans-serif" }}
-        >
-          {eyebrow}
-        </div>
+        <Reveal>
+          <div
+            className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-8"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            {eyebrow}
+          </div>
+        </Reveal>
       )}
-      <h2
-        className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
-        style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
-      >
-        {title}
-      </h2>
-      {children}
+      <Reveal delay={80}>
+        <h2
+          className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+          style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
+        >
+          {title}
+        </h2>
+      </Reveal>
+      <Reveal delay={220}>{children}</Reveal>
     </div>
   </section>
 );
 
 const Story = () => {
   return (
-    <div className="bg-[#050505] text-white">
+    <div className="text-white">
       {/* 1. Start Reading — hero transition */}
-      <section className="relative w-full px-8 md:px-16 py-40 md:py-56 bg-[#050505]">
+      <section
+        className="relative w-full px-8 md:px-16 py-48 md:py-72"
+        style={{ backgroundColor: "rgba(5,5,5,0.35)" }}
+      >
         <div className="max-w-[900px] mx-auto text-center">
-          <div
-            className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            Chapter I
-          </div>
-          <h2
-            className="text-[10vw] md:text-[5.5vw] leading-[1] tracking-tight font-light text-white/90"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
-          >
-            Start Reading
-          </h2>
-          <p
-            className="mt-10 text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[540px] mx-auto"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            Not everything I build starts with code. Some begin with observation.
-          </p>
+          <Reveal>
+            <div
+              className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Chapter I
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <h2
+              className="text-[10vw] md:text-[5.5vw] leading-[1] tracking-tight font-light text-white/90"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
+            >
+              Start Reading
+            </h2>
+          </Reveal>
+          <Reveal delay={300}>
+            <p
+              className="mt-10 text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[540px] mx-auto"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Not everything I build starts with code. Some begin with observation.
+            </p>
+          </Reveal>
         </div>
       </section>
+
+      <SceneDivider />
 
       {/* 2. Thinking */}
       <Section id="thinking" eyebrow="Chapter II" title="Thinking">
         <div className="space-y-24 md:space-y-32 max-w-[720px]">
           {thinkingEntries.map((entry, i) => (
-            <article key={entry.title} className="group">
-              <div
-                className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-4"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <h3
-                className="text-[28px] md:text-[36px] leading-[1.2] font-light mb-6 text-white/90"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                {entry.title}
-              </h3>
-              <p
-                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {entry.body}
-              </p>
-            </article>
+            <Reveal key={entry.title} delay={i * 80}>
+              <article className="group">
+                <div
+                  className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-4"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <h3
+                  className="text-[28px] md:text-[36px] leading-[1.2] font-light mb-6 text-white/90"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {entry.title}
+                </h3>
+                <p
+                  className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85]"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {entry.body}
+                </p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </Section>
+
+      <SceneDivider />
 
       {/* 3. Work I've Explored */}
       <Section id="work" eyebrow="Chapter III" title="Work I've Explored">
         <div className="space-y-28 md:space-y-40 max-w-[860px]">
           {projects.map((p, i) => (
-            <article
-              key={p.title}
-              className={i % 2 === 1 ? "md:pl-32" : ""}
-            >
-              <div
-                className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-5"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {`Ch. ${String(i + 1).padStart(2, "0")}`}
-              </div>
-              <h3
-                className="text-[44px] md:text-[68px] leading-[1] font-light mb-6 text-white"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                {p.title}
-              </h3>
-              <p
-                className="text-[16px] md:text-[19px] text-white/70 font-light leading-[1.6] mb-3 max-w-[560px]"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                {p.insight}
-              </p>
-              <p
-                className="text-[13px] md:text-[14px] text-white/40 font-light leading-[1.7] italic mb-8 max-w-[520px]"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                {p.impact}
-              </p>
-              <a
-                href="#"
-                className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                View Case Study →
-              </a>
-            </article>
+            <Reveal key={p.title} delay={i * 100}>
+              <article className={i % 2 === 1 ? "md:pl-32" : ""}>
+                <div
+                  className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-5"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {`Ch. ${String(i + 1).padStart(2, "0")}`}
+                </div>
+                <h3
+                  className="text-[44px] md:text-[68px] leading-[1] font-light mb-6 text-white"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {p.title}
+                </h3>
+                <p
+                  className="text-[16px] md:text-[19px] text-white/70 font-light leading-[1.6] mb-3 max-w-[560px]"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {p.insight}
+                </p>
+                <p
+                  className="text-[13px] md:text-[14px] text-white/40 font-light leading-[1.7] italic mb-8 max-w-[520px]"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  {p.impact}
+                </p>
+                <a
+                  href="#"
+                  className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  View Case Study →
+                </a>
+              </article>
+            </Reveal>
           ))}
         </div>
       </Section>
+
+      <SceneDivider />
 
       {/* 4. Writing */}
       <Section id="writing" eyebrow="Chapter IV" title="Writing">
         <div className="space-y-20 md:space-y-28 max-w-[720px]">
           {writings.map((quote, i) => (
-            <blockquote
-              key={i}
-              className="relative pl-6 md:pl-10 border-l border-white/15"
-            >
-              <p
-                className="text-[22px] md:text-[30px] leading-[1.35] font-light text-white/85 italic"
-                style={{ fontFamily: "'Cormorant Garamond', serif" }}
-              >
-                “{quote}”
-              </p>
-            </blockquote>
+            <Reveal key={i} delay={i * 120}>
+              <blockquote className="relative pl-6 md:pl-10 border-l border-white/15">
+                <p
+                  className="text-[22px] md:text-[30px] leading-[1.35] font-light text-white/85 italic"
+                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                >
+                  “{quote}”
+                </p>
+              </blockquote>
+            </Reveal>
           ))}
-          <div className="pt-8">
-            <a
-              href="#"
-              className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/70 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              Read more reflections →
-            </a>
-          </div>
+          <Reveal delay={200}>
+            <div className="pt-8">
+              <a
+                href="#"
+                className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/70 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Read more reflections →
+              </a>
+            </div>
+          </Reveal>
         </div>
       </Section>
+
+      <SceneDivider />
 
       {/* 5. Final CTA */}
       <section
         id="contact"
-        className="relative w-full px-8 md:px-16 py-40 md:py-64 bg-[#050505]"
+        className="relative w-full px-8 md:px-16 py-48 md:py-72"
+        style={{ backgroundColor: "rgba(5,5,5,0.6)" }}
       >
         <div className="max-w-[900px] mx-auto">
+          <Reveal>
+            <div
+              className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              End Credits
+            </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <h2
+              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-10 max-w-[820px]"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
+            >
+              Let's build something meaningful.
+            </h2>
+          </Reveal>
+          <Reveal delay={280}>
+            <p
+              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-16"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Open for Product / Internship opportunities.
+            </p>
+          </Reveal>
+          <Reveal delay={400}>
+            <div className="flex flex-wrap items-center gap-8 md:gap-12">
+              <a
+                href="mailto:hello@example.com"
+                className="text-[11px] tracking-[0.4em] uppercase text-black bg-white px-8 py-4 hover:bg-white/85 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Contact Me
+              </a>
+              <a
+                href="#"
+                className="text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                View Resume →
+              </a>
+            </div>
+          </Reveal>
           <div
-            className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            End Credits
-          </div>
-          <h2
-            className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-10 max-w-[820px]"
-            style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
-          >
-            Let's build something meaningful.
-          </h2>
-          <p
-            className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-16"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            Open for Product / Internship opportunities.
-          </p>
-          <div className="flex flex-wrap items-center gap-8 md:gap-12">
-            <a
-              href="mailto:hello@example.com"
-              className="text-[11px] tracking-[0.4em] uppercase text-black bg-white px-8 py-4 hover:bg-white/85 transition-all duration-500"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              Contact Me
-            </a>
-            <a
-              href="#"
-              className="text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              View Resume →
-            </a>
-          </div>
-          <div className="mt-40 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
+            className="mt-40 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <span>Asc. — 2026</span>
