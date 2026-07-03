@@ -30,12 +30,12 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="editorial-display mt-6 text-foreground text-[8.5vw] leading-[1.05] sm:text-[7vw] lg:text-[4.2vw] xl:text-[58px]">
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.12em]">
               <span className="reveal-line" style={{ animationDelay: "0.2s" }}>
                 Product-minded builder
               </span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.12em]">
               <span
                 className="reveal-line italic text-foreground/95"
                 style={{ animationDelay: "0.5s" }}
@@ -43,7 +43,7 @@ const Hero = () => {
                 who blends storytelling
               </span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.12em]">
               <span className="reveal-line" style={{ animationDelay: "0.8s" }}>
                 with digital product thinking.
               </span>
