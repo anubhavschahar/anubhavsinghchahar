@@ -42,9 +42,11 @@ const Hero = () => {
                   fontFamily: "'Inter', sans-serif",
                 }}
               >
-                Understanding comes first.
-                <br className="md:hidden" />
-                <span className="md:ml-3">Everything else is execution.</span>
+                UNDERSTANDING&nbsp;
+                <br />
+                COMES FIRST.
+                <br />
+                EVERYTHING ELSE IS EXECUTION.
               </p>
 
               <h1
