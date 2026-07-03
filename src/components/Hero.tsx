@@ -32,20 +32,22 @@ const Hero = () => {
         {/* Main Composition Area */}
         <div className="relative flex-1 grid grid-cols-12 items-center py-16">
           {/* Typographic Block (Left) */}
-          <div className="col-span-12 lg:col-span-10 z-20">
+          <div className="col-span-12 lg:col-span-8 z-20">
             <div className="relative">
               <p
-                className="reveal-soft mb-6 text-[10px] tracking-[0.6em] uppercase text-white/40"
+                className="reveal-soft mb-8 text-[12px] md:text-[13px] tracking-[0.5em] uppercase text-white/60"
                 style={{
                   animationDelay: "0.25s",
                   fontFamily: "'Inter', sans-serif",
                 }}
               >
-                Understanding comes first. Everything else is execution.
+                Understanding comes first.
+                <br className="md:hidden" />
+                <span className="md:ml-3">Everything else is execution.</span>
               </p>
 
               <h1
-                className="reveal-line font-bold text-[18vw] md:text-[14vw] leading-[0.8] tracking-[-0.08em] text-white"
+                className="reveal-line font-bold text-[22vw] md:text-[19vw] lg:text-[17vw] leading-[0.82] tracking-[-0.09em] text-white"
                 style={{
                   fontFamily: "'Syncopate', sans-serif",
                   animationDelay: "0.4s",
@@ -54,13 +56,35 @@ const Hero = () => {
                 ANUBHAV
               </h1>
 
-              <div className="mt-14 flex flex-col md:flex-row items-start md:items-center gap-10 md:gap-14">
+              <p
+                className="reveal-soft mt-10 max-w-xl text-[15px] md:text-[17px] leading-[1.55] text-white/80 font-light"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  animationDelay: "1.0s",
+                }}
+              >
+                Product-minded builder exploring storytelling through digital
+                products.
+              </p>
+
+              <p
+                className="reveal-soft mt-5 max-w-lg text-[13px] md:text-[14px] leading-[1.7] text-white/50 font-light"
+                style={{
+                  fontFamily: "'Inter', sans-serif",
+                  animationDelay: "1.15s",
+                }}
+              >
+                The best products are not built by jumping to solutions — they
+                begin with observation, curiosity, and clarity.
+              </p>
+
+              <div className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-10">
                 <a
                   href="#thinking"
                   className="reveal-soft group relative px-12 py-5 bg-white text-black text-[11px] font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:bg-neutral-200 active:scale-[0.98]"
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    animationDelay: "1.1s",
+                    animationDelay: "1.3s",
                   }}
                 >
                   Explore My Thinking
@@ -71,57 +95,40 @@ const Hero = () => {
                   className="reveal-soft text-[11px] font-medium uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors duration-500 border-b border-white/20 hover:border-white pb-1"
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    animationDelay: "1.2s",
+                    animationDelay: "1.4s",
                   }}
                 >
                   View Work
                 </a>
-
-                <div
-                  className="reveal-soft max-w-[320px] space-y-4"
-                  style={{ animationDelay: "1.35s" }}
-                >
-                  <div className="h-px w-12 bg-white/20" />
-                  <p
-                    className="text-white/50 text-[11px] leading-relaxed tracking-wide"
-                    style={{ fontFamily: "'Inter', sans-serif" }}
-                  >
-                    Product-minded builder exploring storytelling through digital
-                    products. The best products are not built by jumping to
-                    solutions — they begin with observation, curiosity, and clarity.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
 
-          {/* Portrait Composition (Right / Bleeding) */}
+          {/* Portrait — oversized, free-floating, printed into the poster */}
           <div
             aria-hidden
-            className="absolute bottom-[-10%] right-[-15%] w-[75%] md:w-[65%] h-[120%] z-10 pointer-events-none reveal-portrait"
+            className="absolute -bottom-[18%] -right-[12%] md:-right-[8%] w-[95%] md:w-[80%] lg:w-[72%] xl:w-[68%] h-[135%] z-10 pointer-events-none reveal-portrait"
           >
-            <div className="relative w-full h-full">
-              <img
-                src={portrait}
-                alt=""
-                className="absolute inset-0 w-full h-full object-contain object-bottom grayscale contrast-125 brightness-90 opacity-90"
-                style={{
-                  WebkitMaskImage:
-                    "linear-gradient(to top, transparent 0%, black 22%, black 82%, transparent 100%), linear-gradient(to left, black 55%, transparent 100%)",
-                  maskImage:
-                    "linear-gradient(to top, transparent 0%, black 22%, black 82%, transparent 100%), linear-gradient(to left, black 55%, transparent 100%)",
-                  WebkitMaskComposite: "source-in",
-                  maskComposite: "intersect",
-                }}
-                draggable={false}
-              />
+            <img
+              src={portrait}
+              alt=""
+              className="absolute inset-0 w-full h-full object-contain object-bottom grayscale contrast-[1.15] brightness-[0.95]"
+              style={{
+                WebkitMaskImage:
+                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
+                maskImage:
+                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
+              }}
+              draggable={false}
+            />
 
-              {/* Depth Fog / Atmosphere */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent opacity-90" />
-            </div>
+            {/* Fade portrait into background */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/40 via-transparent to-transparent" />
           </div>
         </div>
+
 
         {/* Footer Accents */}
         <div
