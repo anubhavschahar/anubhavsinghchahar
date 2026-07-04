@@ -218,7 +218,7 @@ const Story = () => {
             </div>
 
             <Reveal delay={160}>
-              <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-center">
+              <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-right">
                 <p
                   className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
                   style={{ fontFamily: "'Inter', sans-serif" }}
