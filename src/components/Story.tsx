@@ -248,7 +248,6 @@ const Story = () => {
             </div>
           </Reveal>
         </div>
-        </div>
       </section>
 
       <SceneDivider />
