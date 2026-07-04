@@ -390,23 +390,36 @@ const Writing = () => {
             </Reveal>
 
             <Reveal delay={180}>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
-                <a
-                  href="https://www.instagram.com/pdhalikhajaat/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-                  style={sans}
+              <a
+                href="https://www.instagram.com/pdhalikhajaat/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-[11px] tracking-[0.35em] uppercase text-white/75 border border-white/20 px-5 py-2.5 hover:text-white hover:border-white/60 hover:bg-white/5 transition-all duration-500 group"
+                style={sans}
+              >
+                <span>Follow on Instagram</span>
+                <svg
+                  className="w-3.5 h-3.5 text-white/50 group-hover:text-white transition-colors duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
                 >
-                  {"\n"}
-                </a>
-                <span
-                  className="text-[11px] tracking-[0.25em] uppercase text-white/30"
-                  style={sans}
-                >
-                  INSTAGRAM
-                </span>
-              </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 16"
+                  />
+                </svg>
+              </a>
+            </Reveal>
+            <Reveal delay={220}>
+              <span
+                className="text-[11px] tracking-[0.25em] uppercase text-white/30"
+                style={sans}
+              >
+                INSTAGRAM
+              </span>
             </Reveal>
           </div>
         </div>
