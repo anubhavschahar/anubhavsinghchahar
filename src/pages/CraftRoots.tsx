@@ -616,11 +616,20 @@ const CraftRoots = () => {
         <SectionTitle>Promising Startup Award</SectionTitle>
         <div className="max-w-[720px] border-t border-white/10 pt-10">
           <p
-            className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.9]"
+            className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.9] mb-10"
             style={sans}
           >
             CraftRoots was recognized with the Promising Startup Award at CAUSE 2026 for its potential to create a sustainable experience-led marketplace connecting travelers and artisans.
           </p>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+            style={sans}
+          >
+            See the Certificate →
+          </a>
         </div>
       </Chapter>
 
