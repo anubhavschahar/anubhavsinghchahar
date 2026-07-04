@@ -1,6 +1,7 @@
 import Reveal from "./Reveal";
 import Journey from "./Journey";
 import Writing from "./Writing";
+import EndCredits from "./EndCredits";
 
 const thinkingBlocks = [
   {
