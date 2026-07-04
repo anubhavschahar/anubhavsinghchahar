@@ -93,10 +93,11 @@ const Hero = () => {
                 fontFamily: "'Inter', sans-serif",
               }}
             >
-              I don't believe the best products begin with features. I think
-              they begin with curiosity. Every project in this portfolio
-              started the same way — with a question, a conversation, and a
-              genuine attempt to understand people before building for them.
+              The pages ahead aren't meant to be skimmed.
+              <br /><br />
+              They're a reflection of how I approach problems, learn from people, and make product decisions.
+              <br /><br />
+              If you're curious about how I think, you're in the right place.
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
