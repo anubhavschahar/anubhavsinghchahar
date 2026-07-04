@@ -121,7 +121,7 @@ const EndCredits = () => {
                   </span>
                 </a>
                 <a
-                  href="#linkedin"
+                  href="https://www.linkedin.com/in/anubhav-singh-chahar"
                   className="group inline-flex items-center text-[13px] md:text-[15px] tracking-[0.35em] uppercase text-white/65 hover:text-white transition-colors duration-500"
                   style={sans}
                 >
