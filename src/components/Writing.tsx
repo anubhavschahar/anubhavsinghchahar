@@ -1,39 +1,210 @@
+import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
 
 const serif = { fontFamily: "'Cormorant Garamond', serif" } as const;
 const sans = { fontFamily: "'Inter', sans-serif" } as const;
 
-const marginNotes = [
+type Reflection = {
+  number: string;
+  title: string;
+  opening: string;
+  body: string[];
+  tag: string;
+  excerpt: string;
+};
+
+const reflections: Reflection[] = [
   {
+    number: "01",
     title: "Literature taught me attention.",
-    excerpt: "A good sentence earns the next one.\nA good interface does the same.",
     tag: "Literature · Design · Attention",
-    href: "#writing-attention",
+    excerpt: "A good sentence earns the next one.\nA good interface does the same.",
+    opening: "A good sentence earns the next one.\nA good interface does the same.",
+    body: [
+      "Reading literature taught me that attention is never automatic. A writer earns it line by line. If one sentence feels unnecessary, the reader quietly begins to leave.",
+      "I think products work the same way.",
+      "A user does not stay because a product has many features. They stay because each step gives them enough clarity, confidence, or curiosity to continue.",
+      "A good onboarding screen earns the next action.",
+      "A good empty state earns the first click.",
+      "A good product flow earns trust before asking for commitment.",
+      "That is why I care about hierarchy, pacing, and small details. They decide whether someone keeps moving or drops off silently.",
+      "Literature made me notice that attention is fragile.",
+      "Product design taught me that attention has to be respected.",
+    ],
   },
   {
+    number: "02",
     title: "Reading changed how I understand users.",
+    tag: "Reading · Empathy · Research",
     excerpt:
       "Books taught me that people rarely say everything directly.\nSometimes the real story lives between the lines.",
-    tag: "Reading · Empathy · Research",
-    href: "#writing-users",
+    opening:
+      "Books taught me that people rarely say everything directly.\nSometimes the real story lives between the lines.",
+    body: [
+      "When I read, I often find that the most important part of a character is not what they say. It is what they avoid, repeat, hide, or struggle to explain.",
+      "User research feels similar.",
+      "People do not always describe the root problem. They describe the symptom they are experiencing. They say the app is confusing, but maybe they mean they do not trust it. They say they need a feature, but maybe they need reassurance, speed, or control.",
+      "Reading made me more patient with people.",
+      "It taught me to listen for patterns, pauses, contradictions, and small emotional cues.",
+      "That is why I do not see research as just collecting answers.",
+      "I see it as learning how to read people with care.",
+    ],
   },
   {
+    number: "03",
     title: "The product begins before the screen.",
+    tag: "Product Thinking · Observation",
     excerpt:
       "Most product problems do not begin in the interface.\nThey begin in the assumptions people make before reaching it.",
-    tag: "Product Thinking · Observation",
-    href: "#writing-before-screen",
+    opening:
+      "Most product problems do not begin in the interface.\nThey begin in the assumptions people make before reaching it.",
+    body: [
+      "A screen is usually the visible part of a deeper problem.",
+      "Before a user taps a button, they already carry expectations, doubts, habits, and previous experiences. Before a business asks for a feature, there is usually a goal, pressure, or constraint behind it.",
+      "That is why I try not to start with the interface too quickly.",
+      "I like asking what happened before the screen.",
+      "Why did the user arrive here?",
+      "What are they trying to avoid?",
+      "What do they already believe?",
+      "What would make them trust the next step?",
+      "Good product thinking begins before design.",
+      "The screen is only where the problem becomes visible.",
+      "The real work is understanding what shaped that moment.",
+    ],
   },
   {
+    number: "04",
     title: "Every project leaves a question.",
+    tag: "Reflection · Learning",
     excerpt:
       "The best work does not end with a solution.\nIt ends with a better question for the next problem.",
-    tag: "Reflection · Learning",
-    href: "#writing-questions",
+    opening:
+      "The best work does not end with a solution.\nIt ends with a better question for the next problem.",
+    body: [
+      "Every project I have worked on has taught me something I did not expect.",
+      "CraftRoots taught me that discovery is not enough unless trust exists.",
+      "ThinkFloor taught me that value often already exists inside a system, but needs structure.",
+      "ReEarth taught me that in complex markets, the real product is certainty.",
+      "Subspace taught me that product promises break when the real journey is ignored.",
+      "That is why I do not see projects as finished case studies.",
+      "I see them as records of how my thinking changed.",
+      "A solution may close one problem, but it usually opens a better question.",
+      "And maybe that is the point of learning product management.",
+      "Not to always have the fastest answer,",
+      "but to keep improving the quality of the questions.",
+    ],
   },
 ];
 
+const ReflectionModal = ({
+  reflection,
+  onClose,
+}: {
+  reflection: Reflection;
+  onClose: () => void;
+}) => {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto animate-in fade-in duration-500"
+      style={{ backgroundColor: "rgba(5,5,5,0.96)" }}
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full min-h-screen px-6 md:px-16 py-10 md:py-16 text-white"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Top bar */}
+        <div className="max-w-[860px] mx-auto flex items-center justify-between mb-16 md:mb-24">
+          <button
+            onClick={onClose}
+            className="text-[11px] tracking-[0.35em] uppercase text-white/60 hover:text-white transition-colors duration-300"
+            style={sans}
+          >
+            ← Back
+          </button>
+          <button
+            onClick={onClose}
+            aria-label="Close reflection"
+            className="text-white/50 hover:text-white transition-colors duration-300 text-xl leading-none"
+            style={sans}
+          >
+            ✕
+          </button>
+        </div>
+
+        <article className="max-w-[760px] mx-auto pb-24 md:pb-40">
+          <div
+            className="text-[10px] tracking-[0.5em] uppercase text-white/35 mb-8"
+            style={sans}
+          >
+            {reflection.number} · Margin Note
+          </div>
+          <div
+            className="text-[10px] tracking-[0.3em] uppercase text-white/40 mb-10"
+            style={sans}
+          >
+            {reflection.tag}
+          </div>
+
+          <h1
+            className="text-[36px] md:text-[60px] leading-[1.1] font-light italic text-white/95 tracking-tight mb-14 md:mb-20"
+            style={serif}
+          >
+            {reflection.title}
+          </h1>
+
+          <blockquote className="border-l border-white/25 pl-6 md:pl-10 mb-16 md:mb-24">
+            <p
+              className="text-[22px] md:text-[32px] leading-[1.35] font-light italic text-white/85 whitespace-pre-line"
+              style={serif}
+            >
+              {reflection.opening}
+            </p>
+          </blockquote>
+
+          <div className="space-y-7 md:space-y-8">
+            {reflection.body.map((p, i) => (
+              <p
+                key={i}
+                className="text-[16px] md:text-[18px] text-white/70 font-light leading-[1.95]"
+                style={sans}
+              >
+                {p}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-20 md:mt-28 pt-10 border-t border-white/10">
+            <button
+              onClick={onClose}
+              className="text-[11px] tracking-[0.35em] uppercase text-white/70 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+              style={sans}
+            >
+              ← Back to Writing
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+  );
+};
+
 const Writing = () => {
+  const [active, setActive] = useState<Reflection | null>(null);
+
   return (
     <section
       id="writing"
@@ -133,11 +304,12 @@ const Writing = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {marginNotes.map((note, i) => (
+            {reflections.map((note, i) => (
               <Reveal key={note.title} delay={i * 80}>
-                <a
-                  href={note.href}
-                  className="group block p-6 md:p-8 border border-white/10 hover:border-white/25 transition-all duration-500 h-full"
+                <button
+                  type="button"
+                  onClick={() => setActive(note)}
+                  className="group block w-full text-left p-6 md:p-8 border border-white/10 hover:border-white/25 transition-all duration-500 h-full"
                 >
                   <div
                     className="text-[10px] tracking-[0.3em] uppercase text-white/35 mb-6"
@@ -163,7 +335,7 @@ const Writing = () => {
                   >
                     Read Reflection →
                   </span>
-                </a>
+                </button>
               </Reveal>
             ))}
           </div>
@@ -265,6 +437,10 @@ const Writing = () => {
           </div>
         </Reveal>
       </div>
+
+      {active && (
+        <ReflectionModal reflection={active} onClose={() => setActive(null)} />
+      )}
     </section>
   );
 };
