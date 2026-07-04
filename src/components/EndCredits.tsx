@@ -103,7 +103,7 @@ const EndCredits = () => {
               </div>
               <div className="flex flex-col items-start gap-6 md:gap-8">
                 <a
-                  href="mailto:your-email-here"
+                  href="mailto:anubhav.singhchahar16@gmail.com"
                   className="group inline-flex items-center text-[13px] md:text-[15px] tracking-[0.35em] uppercase text-white/85 hover:text-white transition-colors duration-500"
                   style={sans}
                 >
