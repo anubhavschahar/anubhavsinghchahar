@@ -1,52 +1,34 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 const portrait = "/hero-bg.jpg";
 
 
 const navItems = [
-  { label: "Thinking", href: "#thinking" },
-  { label: "Work", href: "#work" },
-  { label: "Journey", href: "#journey" },
-  { label: "Writing", href: "#writing" },
+  { label: "Thinking", href: "/#thinking" },
+  { label: "Work", href: "/#work" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Writing", href: "/#writing" },
 ];
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <section className="relative min-h-[85vh] w-full bg-transparent text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-[85vh] flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
         {/* Navigation */}
         <nav
-          className="relative z-50 flex flex-col lg:flex-row items-center gap-6 lg:gap-0 lg:items-center lg:justify-between w-full reveal-soft"
+          className="relative z-50 flex items-center justify-between w-full reveal-soft"
           style={{ animationDelay: "0.1s", fontFamily: "'Inter', sans-serif" }}
         >
           <a
-            href="#top"
+            href="/#top"
             className="text-[13px] font-semibold tracking-[0.36em] text-[#F5F5F5]"
           >
             ANUBHAV SINGH CHAHAR
           </a>
-
-          {/* Header links shown below the name on mobile and tablet */}
-          <div className="flex lg:hidden flex-col items-center gap-5 w-full">
-            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#F5F5F5]/70">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="group relative transition-colors duration-300 hover:text-white"
-                  >
-                    {item.label}
-                    <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-500 ease-out group-hover:scale-x-100" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 border border-[#F5F5F5]/25 px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] rounded-full text-[#F5F5F5] hover:border-white hover:bg-white/[0.04] transition-all duration-500"
-            >
-              Get in Touch <span aria-hidden>→</span>
-            </a>
-          </div>
 
           <ul className="hidden lg:flex items-center gap-10 text-[13px] text-[#F5F5F5]/70">
             {navItems.map((item) => (
@@ -62,12 +44,51 @@ const Hero = () => {
             ))}
           </ul>
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden lg:inline-flex items-center gap-2 border border-[#F5F5F5]/25 px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] rounded-full text-[#F5F5F5] hover:border-white hover:bg-white/[0.04] transition-all duration-500"
           >
             Get in Touch <span aria-hidden>→</span>
           </a>
+          <button
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded={open}
+            onClick={() => setOpen((value) => !value)}
+            className="inline-flex h-11 w-11 items-center justify-center border border-[#F5F5F5]/20 text-[#F5F5F5] transition-colors duration-300 hover:border-[#F5F5F5]/55 lg:hidden"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </nav>
+
+        {open && (
+          <div
+            className="relative z-40 mt-4 border-y border-[#F5F5F5]/10 bg-[#0A0A0A]/75 px-4 py-4 backdrop-blur-xl lg:hidden reveal-soft"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            <ul className="flex flex-col gap-1 text-[13px] text-[#F5F5F5]/78">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block py-3 tracking-[0.12em] uppercase transition-colors duration-300 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="/#contact"
+                  onClick={() => setOpen(false)}
+                  className="block py-3 tracking-[0.12em] uppercase text-[#F5F5F5] transition-colors duration-300 hover:text-white"
+                >
+                  Get in Touch
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
 
         {/* Main composition */}
         <div className="relative flex-1 grid grid-cols-12 gap-8 items-center pt-16 md:pt-20 lg:pt-24">

@@ -454,7 +454,7 @@ const Writing = () => {
               Let’s build something meaningful.
             </p>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
               style={sans}
             >

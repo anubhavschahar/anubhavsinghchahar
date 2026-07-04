@@ -1,12 +1,43 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
 
 const portrait = "/hero-bg.jpg";
 
+type IndexProps = {
+  targetSection?: "thinking" | "work" | "journey" | "writing";
+};
 
-const Index = () => {
+const Index = ({ targetSection }: IndexProps) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hashSection = location.hash.replace("#", "");
+    const sectionId = targetSection ?? hashSection;
+
+    if (!sectionId) {
+      return;
+    }
+
+    let timeoutId: number | undefined;
+    const scrollToSection = () => {
+      document.getElementById(sectionId)?.scrollIntoView({ block: "start" });
+    };
+
+    const frameId = window.requestAnimationFrame(() => {
+      scrollToSection();
+      timeoutId = window.setTimeout(scrollToSection, 120);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
+  }, [location.hash, targetSection]);
+
   return (
-    <main className="relative min-h-screen text-[#F5F5F5]">
+    <main id="top" className="relative min-h-screen text-[#F5F5F5]">
       {/* Fixed cinematic backdrop — never moves on scroll */}
       <div
         aria-hidden

@@ -20,6 +20,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/thinking" element={<Index targetSection="thinking" />} />
+          <Route path="/work" element={<Index targetSection="work" />} />
+          <Route path="/journey" element={<Index targetSection="journey" />} />
+          <Route path="/writing" element={<Index targetSection="writing" />} />
           <Route path="/work/craftroots" element={<CraftRoots />} />
           <Route path="/work/thinkfloor" element={<ThinkFloor />} />
           <Route path="/work/reearth" element={<ReEarth />} />

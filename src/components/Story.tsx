@@ -237,7 +237,7 @@ const Story = () => {
                 ↓
               </div>
               <a
-                href="#work"
+                href="/#work"
                 className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
