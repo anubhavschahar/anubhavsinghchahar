@@ -117,12 +117,12 @@ const certGroups: { title: string; items: Cert[] }[] = [
       {
         title: "GenAI-Powered Data Analytics Job Simulation",
         issuer: "Tata via Forage",
-        href: "#certificate-tata-genai",
+        href: "https://drive.google.com/file/d/1e_QcYVdsUL0GYfB4jrxUTCkHaEUL1ajF/view?usp=sharing",
       },
       {
         title: "Data Analytics Job Simulation",
         issuer: "Deloitte via Forage",
-        href: "#certificate-deloitte-da",
+        href: "https://drive.google.com/file/d/1lawpXPGmvcPCqJrhTAEEAt21ocn5A9Sz/view?usp=sharing",
       },
       {
         title: "AI for Everyone",
@@ -133,7 +133,12 @@ const certGroups: { title: string; items: Cert[] }[] = [
       {
         title: "Statistics Foundations, Levels 1–4",
         issuer: "LinkedIn Learning",
-        href: "#certificate-statistics",
+        hrefs: [
+          "https://www.linkedin.com/learning/certificates/5a8e095c146fdcd302cf953ca13589fc757ebb094989a1af730e532c708385ad?trk=share_certificate",
+          "https://www.linkedin.com/learning/certificates/d79c3dcc81435c152c807e4464940ee862319c0e1af826e64b7e718b8b45462c?trk=share_certificate",
+          "https://www.linkedin.com/learning/certificates/23059f33a8e10459842a4498ff6ec0d56e274c8010566944a504c854d2923349?trk=share_certificate",
+          "https://www.linkedin.com/learning/certificates/14e4603f2950f3d0bad9d214e550f03ddf72a6edd198777fc8d8279666be9765?trk=share_certificate",
+        ],
       },
     ],
   },
