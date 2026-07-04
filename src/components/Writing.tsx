@@ -208,9 +208,28 @@ const Writing = () => {
   return (
     <section
       id="writing"
-      className="relative w-full px-8 md:px-16 py-24 md:py-40 text-white"
-      style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
+      className="relative w-full px-8 md:px-16 py-24 md:py-40 text-white overflow-hidden isolate"
+      style={{ backgroundColor: "#080808" }}
     >
+      {/* Atmospheric literary gradient — fades in/out at section edges */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 transition-opacity duration-700"
+        style={{
+          background:
+            "radial-gradient(circle at 20% 18%, rgba(120, 70, 255, 0.22), transparent 38%), radial-gradient(circle at 82% 28%, rgba(255, 170, 80, 0.16), transparent 40%), radial-gradient(circle at 30% 78%, rgba(180, 40, 90, 0.16), transparent 42%), radial-gradient(circle at 78% 82%, rgba(90, 60, 160, 0.18), transparent 40%), radial-gradient(circle at 50% 50%, rgba(240, 220, 190, 0.05), transparent 55%)",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)",
+        }}
+      />
+      {/* Soft dark veil for readability */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ backgroundColor: "rgba(8,8,10,0.35)" }}
+      />
       <div className="max-w-[1200px] mx-auto">
         {/* Header */}
         <Reveal>
