@@ -36,8 +36,8 @@ const Reveal = ({ children, delay = 0, className = "", as: Tag = "div" }: Reveal
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(18px)",
-        transition: `opacity 1400ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform 1400ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
+        transform: visible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 1600ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms, transform 1600ms cubic-bezier(0.22, 1, 0.36, 1) ${delay}ms`,
         willChange: "opacity, transform",
       }}
     >
