@@ -10,8 +10,34 @@ const navItems = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full bg-[#F8FAFC] text-[#0F172A] overflow-hidden selection:bg-[#2563EB] selection:text-white">
-      <div className="relative mx-auto w-full max-w-[1440px] min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
+    <section className="relative min-h-screen w-full bg-[#0A0A0A] text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
+      {/* Portrait — right side, blended into dark background */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[62%] z-0">
+        <img
+          src={portrait}
+          alt="Portrait of Anubhav Singh Chahar"
+          className="reveal-portrait absolute inset-0 h-full w-full object-cover object-[65%_center] select-none"
+          style={{
+            animationDelay: "1.2s",
+            filter: "grayscale(100%) brightness(0.55) contrast(1.05)",
+            WebkitMaskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 22%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,1) 100%)",
+            maskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 22%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,1) 100%)",
+          }}
+          draggable={false}
+        />
+        {/* Vertical fade top/bottom */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0) 22%, rgba(10,10,10,0) 78%, rgba(10,10,10,0.9) 100%)",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
         {/* Navigation */}
         <nav
           className="relative z-50 flex items-center justify-between w-full reveal-soft"
@@ -19,38 +45,37 @@ const Hero = () => {
         >
           <a
             href="#top"
-            className="text-[13px] font-semibold tracking-[0.28em] text-[#0F172A]"
+            className="text-[13px] font-semibold tracking-[0.36em] text-[#F5F5F5]"
           >
             ANUBHAV SINGH CHAHAR
           </a>
-          <ul className="hidden md:flex items-center gap-10 text-[13px] text-[#0F172A]/70">
+          <ul className="hidden md:flex items-center gap-10 text-[13px] text-[#F5F5F5]/70">
             {navItems.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="group relative transition-colors duration-300 hover:text-[#0F172A]"
+                  className="group relative transition-colors duration-300 hover:text-white"
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#0F172A] transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                  <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-500 ease-out group-hover:scale-x-100" />
                 </a>
               </li>
             ))}
           </ul>
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center px-5 py-2.5 bg-[#0F172A] text-[#F8FAFC] text-[12px] font-medium tracking-[0.08em] rounded-full hover:bg-[#2563EB] transition-colors duration-500"
+            className="hidden md:inline-flex items-center gap-2 border border-[#F5F5F5]/25 px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] rounded-full text-[#F5F5F5] hover:border-white hover:bg-white/[0.04] transition-all duration-500"
           >
-            Get in Touch
+            Get in Touch <span aria-hidden>→</span>
           </a>
         </nav>
 
         {/* Main composition */}
         <div className="relative flex-1 grid grid-cols-12 gap-8 items-center pt-16 md:pt-20 lg:pt-24">
-          {/* Left: Editorial text */}
-          <div className="col-span-12 lg:col-span-8 z-20">
+          <div className="col-span-12 lg:col-span-7 z-20">
             {/* Chapter label */}
             <p
-              className="reveal-soft mb-10 md:mb-12 text-[11px] tracking-[0.42em] uppercase text-[#0F172A]/60"
+              className="reveal-soft mb-10 md:mb-12 text-[11px] tracking-[0.42em] uppercase text-[#2563EB]"
               style={{
                 animationDelay: "0.35s",
                 fontFamily:
@@ -60,37 +85,34 @@ const Hero = () => {
               Product Thinking
             </p>
 
-            {/* Headline — line by line */}
-            <h1 className="editorial-display text-[#0F172A] text-[10.5vw] md:text-[7.2vw] lg:text-[5.6vw] leading-[1.02]">
-              <span
-                className="reveal-line block"
-                style={{ animationDelay: "0.55s" }}
-              >
+            <h1 className="editorial-display text-[#F5F5F5] text-[10.5vw] md:text-[7.2vw] lg:text-[5.4vw] leading-[1.05]">
+              <span className="reveal-line block" style={{ animationDelay: "0.55s" }}>
                 Every product begins
               </span>
-              <span
-                className="reveal-line block"
-                style={{ animationDelay: "0.75s" }}
-              >
+              <span className="reveal-line block" style={{ animationDelay: "0.75s" }}>
                 with a question.
               </span>
+            </h1>
+
+            <h2
+              className="editorial-display mt-10 md:mt-12 text-[#F5F5F5] text-[10.5vw] md:text-[7.2vw] lg:text-[5.4vw] leading-[1.05]"
+            >
               <span
-                className="reveal-line block italic text-[#0F172A]/80"
+                className="reveal-line block italic"
                 style={{ animationDelay: "0.95s" }}
               >
                 Mine always
               </span>
               <span
                 className="reveal-line block italic"
-                style={{ animationDelay: "1.15s", color: "#2563EB" }}
+                style={{ animationDelay: "1.15s" }}
               >
                 starts with people.
               </span>
-            </h1>
+            </h2>
 
-            {/* Supporting paragraph */}
             <p
-              className="reveal-soft mt-10 md:mt-12 max-w-[660px] text-[16px] md:text-[17px] leading-[1.75] text-[#0F172A]/75 font-light"
+              className="reveal-soft mt-10 md:mt-12 max-w-[560px] text-[15px] md:text-[16px] leading-[1.85] text-[#F5F5F5]/70 font-light"
               style={{
                 animationDelay: "1.5s",
                 fontFamily: "'Inter', sans-serif",
@@ -102,80 +124,33 @@ const Hero = () => {
               genuine attempt to understand people before building for them.
             </p>
 
-            {/* Buttons */}
-            <div
-              className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5"
-            >
+            <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
               <a
                 href="#thinking"
-                className="reveal-soft inline-flex items-center justify-center px-8 py-4 bg-[#2563EB] text-white text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:bg-[#1d4ed8] hover:-translate-y-[1px] active:translate-y-0"
-                style={{
-                  animationDelay: "1.75s",
-                  fontFamily: "'Inter', sans-serif",
-                }}
+                className="reveal-soft inline-flex items-center gap-2 px-8 py-4 bg-[#2563EB] text-white text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:bg-[#1d4ed8] hover:-translate-y-[1px]"
+                style={{ animationDelay: "1.75s", fontFamily: "'Inter', sans-serif" }}
               >
-                Start Reading
+                Start Reading <span aria-hidden>→</span>
               </a>
               <a
                 href="#resume"
-                className="reveal-soft inline-flex items-center justify-center px-8 py-4 border border-[#0F172A]/25 text-[#0F172A] text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:border-[#0F172A] hover:bg-[#0F172A]/[0.03]"
-                style={{
-                  animationDelay: "1.9s",
-                  fontFamily: "'Inter', sans-serif",
-                }}
+                className="reveal-soft inline-flex items-center gap-2 px-8 py-4 border border-[#F5F5F5]/25 text-[#F5F5F5] text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:border-white hover:bg-white/[0.04]"
+                style={{ animationDelay: "1.9s", fontFamily: "'Inter', sans-serif" }}
               >
-                Download Résumé
+                Download Résumé <span aria-hidden>↓</span>
               </a>
             </div>
           </div>
-
-          {/* Right: Portrait — blended into background */}
-          <div className="hidden lg:block lg:col-span-4 relative h-full">
-            <div
-              className="reveal-portrait absolute inset-0 flex items-end justify-center pointer-events-none"
-              style={{ animationDelay: "1.2s" }}
-            >
-              <img
-                src={portrait}
-                alt="Portrait of Anubhav"
-                className="w-full h-auto max-h-[82vh] object-contain object-bottom select-none"
-                style={{
-                  filter: "grayscale(100%) contrast(1.02) brightness(1.04)",
-                  mixBlendMode: "multiply",
-                  opacity: 0.92,
-                  WebkitMaskImage:
-                    "radial-gradient(ellipse 70% 78% at 50% 55%, black 40%, rgba(0,0,0,0.55) 65%, transparent 92%)",
-                  maskImage:
-                    "radial-gradient(ellipse 70% 78% at 50% 55%, black 40%, rgba(0,0,0,0.55) 65%, transparent 92%)",
-                }}
-                draggable={false}
-              />
-            </div>
-            {/* Soft light wash to fuse portrait edges into page bg */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(ellipse 80% 70% at 50% 60%, rgba(248,250,252,0) 45%, rgba(248,250,252,0.55) 75%, rgba(248,250,252,0.95) 100%)",
-              }}
-            />
-          </div>
         </div>
 
-        {/* Scroll indicator */}
         <div
-          className="reveal-soft relative z-20 mt-12 flex flex-col items-center gap-3"
-          style={{
-            animationDelay: "2.1s",
-            fontFamily: "'Inter', sans-serif",
-          }}
+          className="reveal-soft relative z-20 mt-12 flex flex-col items-start gap-3"
+          style={{ animationDelay: "2.1s", fontFamily: "'Inter', sans-serif" }}
         >
-          <span className="text-[11px] tracking-[0.32em] uppercase text-[#0F172A]/45">
+          <span className="text-[11px] tracking-[0.32em] uppercase text-[#F5F5F5]/40">
             Scroll to begin the first chapter
           </span>
-          <span className="text-[#0F172A]/45 animate-scroll-nudge text-sm">
-            ↓
-          </span>
+          <span className="text-[#F5F5F5]/40 animate-scroll-nudge text-sm">↓</span>
         </div>
       </div>
     </section>
