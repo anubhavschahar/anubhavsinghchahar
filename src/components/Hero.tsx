@@ -10,32 +10,7 @@ const navItems = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full bg-[#0A0A0A] text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
-      {/* Portrait — right side, blended into dark background */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[62%] z-0">
-        <img
-          src={portrait}
-          alt="Portrait of Anubhav Singh Chahar"
-          className="reveal-portrait absolute inset-0 h-full w-full object-cover object-[65%_center] select-none"
-          style={{
-            animationDelay: "1.2s",
-            filter: "grayscale(100%) brightness(0.55) contrast(1.05)",
-            WebkitMaskImage:
-              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 22%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,1) 100%)",
-            maskImage:
-              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 22%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,1) 100%)",
-          }}
-          draggable={false}
-        />
-        {/* Vertical fade top/bottom */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0) 22%, rgba(10,10,10,0) 78%, rgba(10,10,10,0.9) 100%)",
-          }}
-        />
-      </div>
+    <section className="relative min-h-screen w-full bg-transparent text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
 
       <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
         {/* Navigation */}
