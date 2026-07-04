@@ -69,7 +69,7 @@ const leadership = [
   },
 ];
 
-type Cert = { title: string; issuer: string; href: string; inProgress?: boolean };
+type Cert = { title: string; issuer: string; href?: string; hrefs?: string[]; inProgress?: boolean };
 
 const certGroups: { title: string; items: Cert[] }[] = [
   {
@@ -78,27 +78,36 @@ const certGroups: { title: string; items: Cert[] }[] = [
       {
         title: "Product Management Job Simulation",
         issuer: "Electronic Arts via Forage",
-        href: "#certificate-ea",
+        href: "https://drive.google.com/file/d/1hcLeJdtYyQ1D-e6rp9sa2DaTcU0lBTGj/view?usp=sharing",
       },
       {
         title: "Product Management & Marketing Fundamentals",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-ipl-pmm",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/bjaqbddw5d",
+          "https://courses.productleadership.com/certificates/nriggdlhzu",
+        ],
       },
       {
         title: "Value Proposition Design & Innovation Frameworks",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-ipl-vpd",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/rioi7mbx13",
+          "https://courses.productleadership.com/certificates/3qfsiv9gfr",
+        ],
       },
       {
         title: "Business Analysis & Process Management",
         issuer: "Coursera",
-        href: "#certificate-coursera-ba",
+        href: "https://coursera.org/share/9c0045d8e47d16c79f28199cbe824233",
       },
       {
         title: "Presentation Zen, Storytelling & Creative Confidence",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-presentation-zen",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/snm6ffzqq0",
+          "https://courses.productleadership.com/certificates/lcgz6ayora",
+        ],
       },
     ],
   },
@@ -129,6 +138,7 @@ const certGroups: { title: string; items: Cert[] }[] = [
     ],
   },
 ];
+
 
 const Journey = () => {
   return (
@@ -409,10 +419,12 @@ const Journey = () => {
                 </Reveal>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
                   {group.items.map((c, i) => {
-                    const Wrapper: React.ElementType = c.inProgress ? "div" : "a";
-                    const wrapperProps = c.inProgress
-                      ? {}
-                      : { href: c.href };
+                    const hasMultiple = !!c.hrefs && c.hrefs.length > 1;
+                    const Wrapper: React.ElementType = c.inProgress || hasMultiple ? "div" : "a";
+                    const wrapperProps =
+                      c.inProgress || hasMultiple
+                        ? {}
+                        : { href: c.href, target: "_blank", rel: "noopener noreferrer" };
                     return (
                       <Reveal key={c.title} delay={i * 50}>
                         <Wrapper
@@ -448,6 +460,23 @@ const Journey = () => {
                                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/40 animate-pulse" />
                                 In Progress
                               </div>
+                            ) : hasMultiple ? (
+                              <div
+                                className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-3"
+                                style={sans}
+                              >
+                                {c.hrefs!.map((h, hi) => (
+                                  <a
+                                    key={h}
+                                    href={h}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[10px] tracking-[0.35em] uppercase text-white/60 hover:text-white transition-colors duration-500"
+                                  >
+                                    Certificate 0{hi + 1} →
+                                  </a>
+                                ))}
+                              </div>
                             ) : (
                               <div
                                 className="mt-8 pt-6 border-t border-white/10 text-[10px] tracking-[0.35em] uppercase text-white/60 group-hover:text-white transition-colors duration-500"
@@ -458,6 +487,7 @@ const Journey = () => {
                             )}
                           </div>
                         </Wrapper>
+
                       </Reveal>
                     );
                   })}
