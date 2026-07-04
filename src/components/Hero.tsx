@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-[85vh] flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
         {/* Navigation */}
         <nav
-          className="relative z-50 flex items-center justify-between w-full reveal-soft"
+          className="relative z-50 flex flex-col md:flex-row items-center gap-6 md:gap-0 md:items-center md:justify-between w-full reveal-soft"
           style={{ animationDelay: "0.1s", fontFamily: "'Inter', sans-serif" }}
         >
           <a
@@ -24,6 +24,30 @@ const Hero = () => {
           >
             ANUBHAV SINGH CHAHAR
           </a>
+
+          {/* Mobile header links shown below the name */}
+          <div className="flex md:hidden flex-col items-center gap-5 w-full">
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-[#F5F5F5]/70">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="group relative transition-colors duration-300 hover:text-white"
+                  >
+                    {item.label}
+                    <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 border border-[#F5F5F5]/25 px-5 py-2.5 text-[12px] font-medium tracking-[0.08em] rounded-full text-[#F5F5F5] hover:border-white hover:bg-white/[0.04] transition-all duration-500"
+            >
+              Get in Touch <span aria-hidden>→</span>
+            </a>
+          </div>
+
           <ul className="hidden md:flex items-center gap-10 text-[13px] text-[#F5F5F5]/70">
             {navItems.map((item) => (
               <li key={item.label}>
