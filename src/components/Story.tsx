@@ -216,37 +216,37 @@ const Story = () => {
                 </Reveal>
               ))}
             </div>
-
-            <Reveal delay={160}>
-              <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-right">
-                <p
-                  className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  These ideas only matter when they're tested.
-                </p>
-                <p
-                  className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-10"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  The next chapter is where they became decisions.
-                </p>
-                <div
-                  className="text-[24px] md:text-[32px] text-white/30 font-light italic mb-10"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  ↓
-                </div>
-                <a
-                  href="#work"
-                  className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  Chapter II — Selected Work
-                </a>
-              </div>
-            </Reveal>
           </div>
+
+          <Reveal delay={160}>
+            <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-right max-w-[680px] ml-auto">
+              <p
+                className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                These ideas only matter when they're tested.
+              </p>
+              <p
+                className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-10"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                The next chapter is where they became decisions.
+              </p>
+              <div
+                className="text-[24px] md:text-[32px] text-white/30 font-light italic mb-10"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                ↓
+              </div>
+              <a
+                href="#work"
+                className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Chapter II — Selected Work
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
