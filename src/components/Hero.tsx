@@ -135,7 +135,9 @@ const Hero = () => {
                 Visit LinkedIn <span aria-hidden>→</span>
               </a>
               <a
-                href="#resume"
+                href="https://drive.google.com/file/d/1Hifyt_7OanHQkaIsNgo09ZqNYz98wj4p/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="reveal-soft inline-flex items-center gap-2 px-8 py-4 border border-[#F5F5F5]/25 text-[#F5F5F5] text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:border-white hover:bg-white/[0.04]"
                 style={{ animationDelay: "1.9s", fontFamily: "'Inter', sans-serif" }}
               >
