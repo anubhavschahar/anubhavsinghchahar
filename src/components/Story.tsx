@@ -570,37 +570,11 @@ const Story = () => {
       <SceneDivider />
 
       {/* 5. Writing */}
-      <Section id="writing" eyebrow="CHAPTER IV" title="Writing">
-        <div className="space-y-12 md:space-y-16 max-w-[720px]">
-          {writings.map((quote, i) => (
-            <Reveal key={i} delay={i * 120}>
-              <blockquote className="relative pl-6 md:pl-10 border-l border-white/15">
-                <p
-                  className="text-[22px] md:text-[30px] leading-[1.35] font-light text-white/85 italic"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  “{quote}”
-                </p>
-              </blockquote>
-            </Reveal>
-          ))}
-          <Reveal delay={200}>
-            <div className="pt-8">
-              <a
-                href="#"
-                className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/70 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Read more reflections →
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </Section>
+      <Writing />
 
       <SceneDivider />
 
-      {/* 5. Final CTA */}
+      {/* 6. Final CTA */}
       <section
         id="contact"
         className="relative w-full px-8 md:px-16 py-28 md:py-44"
