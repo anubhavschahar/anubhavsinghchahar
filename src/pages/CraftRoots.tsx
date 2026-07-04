@@ -110,48 +110,55 @@ const metrics = [
   { label: "Satisfaction", value: "4.0+", text: "average rating · 80% report the experience as meaningful" },
 ];
 
+import prdAsset from "@/assets/docs/prd.asset.json";
+import deckAsset from "@/assets/docs/deck.asset.json";
+import onepageAsset from "@/assets/docs/onepage.asset.json";
+import competitorAsset from "@/assets/docs/competitor.asset.json";
+import journeyAsset from "@/assets/docs/journey.asset.json";
+import personasAsset from "@/assets/docs/personas.asset.json";
+
 const documents = [
   {
     label: "Strategy",
     title: "Product Requirements Document",
     text: "The full product thinking behind CraftRoots — vision, users, features, roadmap, metrics, risks, and business model.",
     cta: "Read PRD →",
-    href: "#prd",
+    href: prdAsset.url,
   },
   {
     label: "Narrative",
     title: "Pitch Deck",
     text: "The original CAUSE 2026 pitch narrative explaining the Channapatna pilot, 5 Whys, validation, solution, and success metrics.",
     cta: "View Deck →",
-    href: "#deck",
+    href: deckAsset.url,
   },
   {
     label: "Summary",
     title: "One Page Document",
     text: "A concise narrative explaining the market gap, the two-sided audience, and the product vision.",
     cta: "Read Summary →",
-    href: "#one-page",
+    href: onepageAsset.url,
   },
   {
     label: "Market",
     title: "Competitor Analysis",
     text: "A study of OTAs, experience marketplaces, luxury operators, government portals, and e-commerce craft platforms.",
     cta: "Read Analysis →",
-    href: "#competitor-analysis",
+    href: competitorAsset.url,
   },
   {
     label: "Experience",
     title: "Customer Journey Map",
     text: "The end-to-end traveller journey from discovery and booking to workshop experience, feedback, loyalty, and advocacy.",
     cta: "View Journey →",
-    href: "#journey-map",
+    href: journeyAsset.url,
   },
   {
     label: "Research",
     title: "Personas & Empathy Maps",
     text: "The traveller and artisan personas used to understand motivations, goals, behaviours, and pain points.",
     cta: "View Personas →",
-    href: "#personas",
+    href: personasAsset.url,
   },
 ];
 
