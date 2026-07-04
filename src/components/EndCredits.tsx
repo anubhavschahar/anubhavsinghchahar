@@ -139,7 +139,7 @@ const EndCredits = () => {
                   style={sans}
                 >
                   <span className="border-b border-white/20 pb-1 group-hover:border-white/60 transition-all duration-500">
-                    Visit padhalikhajaat →
+                    {"\n"}
                   </span>
                 </a>
               </div>
