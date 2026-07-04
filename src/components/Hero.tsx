@@ -129,25 +129,36 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Portrait — integrated, no card */}
+          {/* Right: Portrait — blended into background */}
           <div className="hidden lg:block lg:col-span-4 relative h-full">
             <div
-              className="reveal-portrait absolute inset-0 flex items-end justify-center"
+              className="reveal-portrait absolute inset-0 flex items-end justify-center pointer-events-none"
               style={{ animationDelay: "1.2s" }}
             >
               <img
                 src={portrait}
                 alt="Portrait of Anubhav"
-                className="w-full h-auto max-h-[78vh] object-contain object-bottom select-none"
+                className="w-full h-auto max-h-[82vh] object-contain object-bottom select-none"
                 style={{
+                  filter: "grayscale(100%) contrast(1.02) brightness(1.04)",
+                  mixBlendMode: "multiply",
+                  opacity: 0.92,
                   WebkitMaskImage:
-                    "radial-gradient(ellipse 85% 90% at 50% 55%, black 55%, transparent 95%)",
+                    "radial-gradient(ellipse 70% 78% at 50% 55%, black 40%, rgba(0,0,0,0.55) 65%, transparent 92%)",
                   maskImage:
-                    "radial-gradient(ellipse 85% 90% at 50% 55%, black 55%, transparent 95%)",
+                    "radial-gradient(ellipse 70% 78% at 50% 55%, black 40%, rgba(0,0,0,0.55) 65%, transparent 92%)",
                 }}
                 draggable={false}
               />
             </div>
+            {/* Soft light wash to fuse portrait edges into page bg */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 70% at 50% 60%, rgba(248,250,252,0) 45%, rgba(248,250,252,0.55) 75%, rgba(248,250,252,0.95) 100%)",
+              }}
+            />
           </div>
         </div>
 
