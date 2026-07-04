@@ -2,11 +2,11 @@ const serif = { fontFamily: "'Cormorant Garamond', serif" } as const;
 const sans = { fontFamily: "'Inter', sans-serif" } as const;
 
 const navLinks = [
-  { label: "Thinking", href: "#thinking" },
-  { label: "Work", href: "#work" },
-  { label: "Journey", href: "#journey" },
-  { label: "Writing", href: "#writing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Thinking", href: "/#thinking" },
+  { label: "Work", href: "/#work" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Writing", href: "/#writing" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const EndCredits = () => {

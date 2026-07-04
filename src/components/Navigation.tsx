@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Thinking", href: "#thinking" },
-  { label: "Work", href: "#work" },
-  { label: "Journey", href: "#journey" },
-  { label: "Writing", href: "#writing" },
+  { label: "Thinking", href: "/#thinking" },
+  { label: "Work", href: "/#work" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Writing", href: "/#writing" },
 ];
 
 const Navigation = () => {
@@ -29,7 +29,7 @@ const Navigation = () => {
     >
       <nav className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-6 md:h-20 md:px-12">
         <a
-          href="#top"
+          href="/#top"
           className="text-sm font-medium tracking-[0.28em] text-foreground"
           aria-label="Anubhav — home"
         >
