@@ -252,48 +252,105 @@ const Story = () => {
 
       <SceneDivider />
 
-      {/* 3. Work I've Explored */}
-      <Section id="work" eyebrow="CHAPTER II" title="Work I've Explored">
-        <div className="space-y-16 md:space-y-24 max-w-[860px]">
-          {projects.map((p, i) => (
-            <Reveal key={p.title} delay={i * 100}>
-              <article className={i % 2 === 1 ? "md:pl-32" : ""}>
-                <div
-                  className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-5"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {`Ch. ${String(i + 1).padStart(2, "0")}`}
+      {/* 3. Selected Work */}
+      <Section id="work" eyebrow="CHAPTER II" title="Selected Work">
+        <div className="max-w-[860px]">
+          <Reveal delay={80}>
+            <p
+              className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-4"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Every project taught me something different. Some challenged my assumptions, some changed the way I approached research, and others reminded me that good product decisions begin long before the first solution.
+            </p>
+            <p
+              className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-20 md:mb-28"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              These chapters are not only about what I built.
+              <br />
+              They are about how I learned to think.
+            </p>
+          </Reveal>
+
+          {/* Featured Chapter 01 — CraftRoots */}
+          <Reveal delay={120}>
+            <article className="relative border-t border-white/10 pt-14 md:pt-20">
+              <div
+                className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Featured Chapter 01
+              </div>
+              <h3
+                className="text-[56px] md:text-[92px] lg:text-[108px] leading-[0.95] font-light mb-8 text-white"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                CraftRoots
+              </h3>
+              <p
+                className="text-[20px] md:text-[26px] leading-[1.35] font-light italic text-white/80 mb-10 max-w-[640px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Turning a bypassed craft town into a bookable experience.
+              </p>
+              <p
+                className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.85] mb-12 max-w-[620px]"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                CraftRoots is a product concept exploring how travellers could discover, trust, and participate in authentic artisan workshops — while helping artisans earn directly from their skills, not just finished products.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-14 max-w-[720px]">
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Role
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Product Strategy · User Research · MVP Definition · Storytelling
+                  </p>
                 </div>
-                <h3
-                  className="text-[44px] md:text-[68px] leading-[1] font-light mb-6 text-white"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  {p.title}
-                </h3>
-                <p
-                  className="text-[16px] md:text-[19px] text-white/70 font-light leading-[1.6] mb-3 max-w-[560px]"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  {p.insight}
-                </p>
-                <p
-                  className="text-[13px] md:text-[14px] text-white/40 font-light leading-[1.7] italic mb-8 max-w-[520px]"
-                  style={{ fontFamily: "'Cormorant Garamond', serif" }}
-                >
-                  {p.impact}
-                </p>
-                <a
-                  href="#"
-                  className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  View Case Study →
-                </a>
-              </article>
-            </Reveal>
-          ))}
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Focus
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Marketplace Design · Artisan Economy · Experience Booking
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/work/craftroots"
+                className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/85 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Read Chapter →
+              </a>
+            </article>
+          </Reveal>
+
+          <Reveal delay={200}>
+            <div className="mt-24 md:mt-32 pt-10 border-t border-white/5 text-[10px] tracking-[0.4em] uppercase text-white/25"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              More chapters coming soon
+            </div>
+          </Reveal>
         </div>
       </Section>
+
 
       <SceneDivider />
 
