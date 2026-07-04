@@ -116,6 +116,12 @@ const certGroups: { title: string; items: Cert[] }[] = [
         href: "#certificate-deloitte-da",
       },
       {
+        title: "AI for Everyone",
+        issuer: "Coursera",
+        href: "#certificate-ai-for-everyone",
+        inProgress: true,
+      },
+      {
         title: "Statistics Foundations, Levels 1–4",
         issuer: "LinkedIn Learning",
         href: "#certificate-statistics",
