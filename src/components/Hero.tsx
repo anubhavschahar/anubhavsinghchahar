@@ -21,7 +21,7 @@ const Hero = () => {
             href="#top"
             className="text-[13px] font-semibold tracking-[0.28em] text-[#0F172A]"
           >
-            ANUBHAV
+            ANUBHAV SINGH CHAHAR
           </a>
           <ul className="hidden md:flex items-center gap-10 text-[13px] text-[#0F172A]/70">
             {navItems.map((item) => (
