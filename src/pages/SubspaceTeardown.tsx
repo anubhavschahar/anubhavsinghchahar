@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "@/components/Reveal";
+import deletedAccountShot from "@/assets/subspace-deleted-account.png.asset.json";
 
 const serif = { fontFamily: "'Cormorant Garamond', serif" } as const;
 const sans = { fontFamily: "'Inter', sans-serif" } as const;
