@@ -408,41 +408,59 @@ const Journey = () => {
                   </div>
                 </Reveal>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
-                  {group.items.map((c, i) => (
-                    <Reveal key={c.title} delay={i * 50}>
-                      <a
-                        href={c.href}
-                        className="group block h-full p-8 md:p-10 bg-[rgba(10,10,10,0.85)] hover:bg-[rgba(20,20,20,0.9)] transition-colors duration-500"
-                      >
-                        <div className="flex flex-col h-full min-h-[220px]">
-                          <div
-                            className="text-[9px] tracking-[0.4em] uppercase text-white/30 mb-6"
-                            style={sans}
-                          >
-                            Certificate · 0{i + 1}
+                  {group.items.map((c, i) => {
+                    const Wrapper: React.ElementType = c.inProgress ? "div" : "a";
+                    const wrapperProps = c.inProgress
+                      ? {}
+                      : { href: c.href };
+                    return (
+                      <Reveal key={c.title} delay={i * 50}>
+                        <Wrapper
+                          {...wrapperProps}
+                          className={`group block h-full p-8 md:p-10 bg-[rgba(10,10,10,0.85)] transition-colors duration-500 ${
+                            c.inProgress ? "" : "hover:bg-[rgba(20,20,20,0.9)]"
+                          }`}
+                        >
+                          <div className="flex flex-col h-full min-h-[220px]">
+                            <div
+                              className="text-[9px] tracking-[0.4em] uppercase text-white/30 mb-6"
+                              style={sans}
+                            >
+                              Certificate · 0{i + 1}
+                            </div>
+                            <h4
+                              className="text-[19px] md:text-[22px] leading-[1.25] font-light text-white/90 mb-4"
+                              style={serif}
+                            >
+                              {c.title}
+                            </h4>
+                            <p
+                              className="text-[13px] text-white/50 font-light leading-[1.6] mb-auto"
+                              style={sans}
+                            >
+                              {c.issuer}
+                            </p>
+                            {c.inProgress ? (
+                              <div
+                                className="mt-8 pt-6 border-t border-white/10 flex items-center gap-3 text-[10px] tracking-[0.35em] uppercase text-white/40"
+                                style={sans}
+                              >
+                                <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/40 animate-pulse" />
+                                In Progress
+                              </div>
+                            ) : (
+                              <div
+                                className="mt-8 pt-6 border-t border-white/10 text-[10px] tracking-[0.35em] uppercase text-white/60 group-hover:text-white transition-colors duration-500"
+                                style={sans}
+                              >
+                                View Certificate →
+                              </div>
+                            )}
                           </div>
-                          <h4
-                            className="text-[19px] md:text-[22px] leading-[1.25] font-light text-white/90 mb-4"
-                            style={serif}
-                          >
-                            {c.title}
-                          </h4>
-                          <p
-                            className="text-[13px] text-white/50 font-light leading-[1.6] mb-auto"
-                            style={sans}
-                          >
-                            {c.issuer}
-                          </p>
-                          <div
-                            className="mt-8 pt-6 border-t border-white/10 text-[10px] tracking-[0.35em] uppercase text-white/60 group-hover:text-white transition-colors duration-500"
-                            style={sans}
-                          >
-                            View Certificate →
-                          </div>
-                        </div>
-                      </a>
-                    </Reveal>
-                  ))}
+                        </Wrapper>
+                      </Reveal>
+                    );
+                  })}
                 </div>
               </div>
             ))}
