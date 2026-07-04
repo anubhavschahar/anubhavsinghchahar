@@ -54,10 +54,10 @@ const writings = [
 const SceneDivider = () => (
   <div
     aria-hidden
-    className="pointer-events-none w-full h-40 md:h-56"
+    className="pointer-events-none w-full h-56 md:h-72"
     style={{
       background:
-        "linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,0.35) 50%, rgba(5,5,5,0) 100%)",
+        "linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0) 100%)",
     }}
   />
 );
