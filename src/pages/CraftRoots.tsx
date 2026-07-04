@@ -709,7 +709,7 @@ const CraftRoots = () => {
           </Reveal>
           <Reveal delay={280}>
             <a
-              href="#thinkfloor"
+              href="/work/thinkfloor"
               className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
               style={sans}
             >
