@@ -771,7 +771,9 @@ const ThinkFloor = () => {
         <div className="max-w-[900px] border-t border-white/10">
           <Reveal>
             <a
-              href="#thinkfloor-deck"
+              href="https://canva.link/3y9m3jim31ipk4m"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group block border-b border-white/10 px-2 md:px-8 py-10 md:py-14 hover:bg-white/[0.03] transition-colors duration-500"
             >
               <div
