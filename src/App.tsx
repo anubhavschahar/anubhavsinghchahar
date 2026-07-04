@@ -21,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/work/craftroots" element={<CraftRoots />} />
           <Route path="/work/thinkfloor" element={<ThinkFloor />} />
+          <Route path="/work/reearth" element={<ReEarth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
