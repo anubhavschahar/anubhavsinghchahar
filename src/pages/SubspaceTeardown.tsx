@@ -683,21 +683,19 @@ const SubspaceTeardown = () => {
             >
               Evidence — Redacted Screenshot
             </div>
+            <div className="aspect-[16/9] w-full border border-white/10 relative overflow-hidden bg-black">
+              <img
+                src={deletedAccountShot.url}
+                alt="Deleted-account payment failure screen — sensitive fields obscured."
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
+            </div>
             <div
-              className="aspect-[16/9] w-full border border-white/10 flex items-center justify-center relative overflow-hidden"
-              style={{
-                background:
-                  "repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 12px, rgba(255,255,255,0.04) 12px 24px)",
-              }}
+              className="mt-4 text-[11px] text-white/50 font-light italic"
+              style={sans}
             >
-              <div className="text-center px-6" style={sans}>
-                <div className="text-[10px] tracking-[0.4em] uppercase text-white/40 mb-3">
-                  [Phone number redacted] · [Email redacted]
-                </div>
-                <div className="text-[13px] text-white/50 font-light">
-                  Deleted-account payment failure screen — sensitive fields obscured.
-                </div>
-              </div>
+              Deleted-account payment failure screen — sensitive fields obscured.
             </div>
           </div>
         </Reveal>
