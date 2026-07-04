@@ -69,7 +69,7 @@ const leadership = [
   },
 ];
 
-type Cert = { title: string; issuer: string; href: string };
+type Cert = { title: string; issuer: string; href: string; inProgress?: boolean };
 
 const certGroups: { title: string; items: Cert[] }[] = [
   {
