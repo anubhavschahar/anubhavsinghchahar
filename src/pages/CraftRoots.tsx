@@ -671,8 +671,8 @@ const CraftRoots = () => {
 
       <Divider />
 
-      {/* 11 — What I Learned */}
-      <Chapter number="11 — What I Learned">
+      {/* 12 — What I Learned */}
+      <Chapter number="12 — What I Learned">
         <SectionTitle>What CraftRoots changed in how I think.</SectionTitle>
         <div className="space-y-6 max-w-[680px]">
           <Body>
