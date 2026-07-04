@@ -126,11 +126,13 @@ const Hero = () => {
 
             <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
               <a
-                href="#thinking"
+                href="https://www.linkedin.com/in/anubhav-singh-chahar"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="reveal-soft inline-flex items-center gap-2 px-8 py-4 bg-[#2563EB] text-white text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:bg-[#1d4ed8] hover:-translate-y-[1px]"
                 style={{ animationDelay: "1.75s", fontFamily: "'Inter', sans-serif" }}
               >
-                Start Reading <span aria-hidden>→</span>
+                Visit LinkedIn <span aria-hidden>→</span>
               </a>
               <a
                 href="#resume"
