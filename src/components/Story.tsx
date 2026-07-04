@@ -130,7 +130,7 @@ const Story = () => {
               Every product begins with a question.
               <br /><br />
               The chapters ahead are my attempt to understand those questions through curiosity, conversations, and thoughtful decisions.
-              <br />
+              <br /><br />
               This is a record of how I'm learning to build products that matter.
             </p>
           </Reveal>
