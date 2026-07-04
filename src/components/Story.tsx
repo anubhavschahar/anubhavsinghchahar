@@ -1,25 +1,40 @@
 import Reveal from "./Reveal";
 
-const thinkingEntries = [
+const thinkingBlocks = [
   {
-    title: "Why I care about product thinking",
+    title: "Start with People",
     body:
-      "Every product is a conversation with a stranger. Before I write a line of code, I want to know who is on the other side — what they fear, what they postpone, what they wish someone had already built for them. Features are cheap. Understanding is not.",
+      "Every feature begins with someone trying to achieve something. Before discussing solutions, I try to understand the person, the context, and the motivation behind the problem.",
+    notebook:
+      "People rarely ask for what they actually need. They describe the struggle they're experiencing.",
   },
   {
-    title: "What literature taught me about design",
+    title: "Stay Curious Longer",
     body:
-      "Novels taught me that attention is the most fragile thing a person can offer. A good sentence earns the next one. A good interface earns the next tap. Storytelling and design share the same discipline — respect for the reader, the user, the human still deciding whether to stay.",
+      "I try to delay solutions until I've understood the problem well enough. Curiosity often reveals opportunities that assumptions hide.",
+    notebook:
+      "The second 'why' is usually more valuable than the first answer.",
   },
   {
-    title: "My approach to building products",
+    title: "Look for Patterns",
     body:
-      "I start with the question, not the solution. I sketch the smallest version of the truth I am trying to prove, and then I let the product argue back. The best builds I have shipped began as reluctant paragraphs before they ever became pixels.",
+      "Individual observations tell stories. Patterns help make decisions. I enjoy connecting research, behaviour, and business context until the bigger picture becomes clear.",
+    notebook:
+      "One conversation is an opinion. Repeated behaviour is evidence.",
   },
   {
-    title: "On staying a beginner",
+    title: "Think in Systems",
     body:
-      "I try to remember what it felt like the first time I opened a terminal, the first time a poem broke me open. Curiosity is a muscle. The moment I feel certain, I know I have stopped looking.",
+      "Every product exists inside a larger system of users, business goals, technology, and constraints. I try to understand how each decision influences the whole rather than optimizing only one part.",
+    notebook:
+      "Optimizing one metric can quietly break another.",
+  },
+  {
+    title: "Keep Learning",
+    body:
+      "Every project leaves behind more than an outcome. It leaves behind a better question for the next project. Reading, writing, and reflecting have taught me that growth comes from continuously refining the way I think.",
+    notebook:
+      "Every book changes the reader. Every project should change the builder.",
   },
 ];
 
