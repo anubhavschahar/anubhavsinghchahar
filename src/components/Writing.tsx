@@ -373,7 +373,9 @@ const Writing = () => {
             <Reveal delay={180}>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-10">
                 <a
-                  href="#padhalikhajaat"
+                  href="https://www.instagram.com/pdhalikhajaat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
                   style={sans}
                 >
