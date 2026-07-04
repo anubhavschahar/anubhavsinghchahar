@@ -122,7 +122,7 @@ const Story = () => {
     <div className="text-white">
       {/* 1. Start Reading — hero transition */}
       <section
-        className="relative w-full px-8 md:px-16 py-48 md:py-72"
+        className="relative w-full px-8 md:px-16 py-[10.8rem] md:py-[16.2rem]"
         style={{ backgroundColor: "rgba(5,5,5,0.35)" }}
       >
         <div className="max-w-[900px] mx-auto text-center">
