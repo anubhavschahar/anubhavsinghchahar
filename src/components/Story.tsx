@@ -132,7 +132,11 @@ const Story = () => {
               className="mt-10 text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[540px] mx-auto"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Not everything I build starts with code. Some begin with observation.
+              The pages ahead aren't meant to be skimmed.
+              <br /><br />
+              They're a reflection of how I approach problems, learn from people, and make product decisions.
+              <br /><br />
+              If you're curious about how I think, you're in the right place.
             </p>
           </Reveal>
         </div>
