@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import Journey from "./Journey";
+import Writing from "./Writing";
 
 const thinkingBlocks = [
   {
@@ -40,11 +41,6 @@ const thinkingBlocks = [
 ];
 
 
-const writings = [
-  "Poems are not finished when written. They are finished when read.",
-  "The interface is the second draft of the intention.",
-  "A product without a point of view is just a form with better spacing.",
-];
 
 // Subtle gradient overlay between scenes — creates depth without moving the fixed background.
 const SceneDivider = () => (
