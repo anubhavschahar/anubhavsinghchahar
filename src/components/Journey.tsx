@@ -419,10 +419,12 @@ const Journey = () => {
                 </Reveal>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
                   {group.items.map((c, i) => {
-                    const Wrapper: React.ElementType = c.inProgress ? "div" : "a";
-                    const wrapperProps = c.inProgress
-                      ? {}
-                      : { href: c.href };
+                    const hasMultiple = !!c.hrefs && c.hrefs.length > 1;
+                    const Wrapper: React.ElementType = c.inProgress || hasMultiple ? "div" : "a";
+                    const wrapperProps =
+                      c.inProgress || hasMultiple
+                        ? {}
+                        : { href: c.href, target: "_blank", rel: "noopener noreferrer" };
                     return (
                       <Reveal key={c.title} delay={i * 50}>
                         <Wrapper
@@ -458,6 +460,23 @@ const Journey = () => {
                                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-white/40 animate-pulse" />
                                 In Progress
                               </div>
+                            ) : hasMultiple ? (
+                              <div
+                                className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-x-6 gap-y-3"
+                                style={sans}
+                              >
+                                {c.hrefs!.map((h, hi) => (
+                                  <a
+                                    key={h}
+                                    href={h}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[10px] tracking-[0.35em] uppercase text-white/60 hover:text-white transition-colors duration-500"
+                                  >
+                                    Certificate 0{hi + 1} →
+                                  </a>
+                                ))}
+                              </div>
                             ) : (
                               <div
                                 className="mt-8 pt-6 border-t border-white/10 text-[10px] tracking-[0.35em] uppercase text-white/60 group-hover:text-white transition-colors duration-500"
@@ -468,6 +487,7 @@ const Journey = () => {
                             )}
                           </div>
                         </Wrapper>
+
                       </Reveal>
                     );
                   })}
