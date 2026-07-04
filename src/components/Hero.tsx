@@ -1,144 +1,173 @@
 import portraitAsset from "@/assets/anubhav-photo-2.jpeg.asset.json";
 const portrait = portraitAsset.url;
 
-const navItems = ["Thinking", "Work", "Journey", "Resume"];
+const navItems = [
+  { label: "Thinking", href: "#thinking" },
+  { label: "Work", href: "#work" },
+  { label: "Journey", href: "#journey" },
+  { label: "Resume", href: "#resume" },
+];
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center overflow-hidden selection:bg-white selection:text-black">
-      <div className="relative w-full max-w-[1600px] min-h-screen flex flex-col justify-between p-8 md:p-16">
-
-        {/* Cinematic Navigation */}
+    <section className="relative min-h-screen w-full bg-[#F8FAFC] text-[#0F172A] overflow-hidden selection:bg-[#2563EB] selection:text-white">
+      <div className="relative mx-auto w-full max-w-[1440px] min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
+        {/* Navigation */}
         <nav
-          className="relative z-50 flex justify-between items-center w-full reveal-soft"
+          className="relative z-50 flex items-center justify-between w-full reveal-soft"
           style={{ animationDelay: "0.1s", fontFamily: "'Inter', sans-serif" }}
         >
-          <div
-            className="text-white text-xl tracking-tighter font-bold"
-            style={{ fontFamily: "'Syncopate', sans-serif" }}
+          <a
+            href="#top"
+            className="text-[13px] font-semibold tracking-[0.28em] text-[#0F172A]"
           >
-            Asc.
-          </div>
-          <ul className="hidden md:flex gap-12 text-[10px] tracking-[0.4em] uppercase text-white/40">
+            ANUBHAV
+          </a>
+          <ul className="hidden md:flex items-center gap-10 text-[13px] text-[#0F172A]/70">
             {navItems.map((item) => (
-              <li
-                key={item}
-                className="hover:text-white transition-colors duration-500 cursor-pointer"
-              >
-                <a href={`#${item.toLowerCase()}`}>{item}</a>
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className="group relative transition-colors duration-300 hover:text-[#0F172A]"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#0F172A] transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                </a>
               </li>
             ))}
           </ul>
+          <a
+            href="#contact"
+            className="hidden md:inline-flex items-center px-5 py-2.5 bg-[#0F172A] text-[#F8FAFC] text-[12px] font-medium tracking-[0.08em] rounded-full hover:bg-[#2563EB] transition-colors duration-500"
+          >
+            Get in Touch
+          </a>
         </nav>
 
-        {/* Main Composition Area */}
-        <div className="relative flex-1 grid grid-cols-12 items-center py-16">
-          {/* Typographic Block (Left) */}
+        {/* Main composition */}
+        <div className="relative flex-1 grid grid-cols-12 gap-8 items-center pt-16 md:pt-20 lg:pt-24">
+          {/* Left: Editorial text */}
           <div className="col-span-12 lg:col-span-8 z-20">
-            <div className="relative">
-              <p
-                className="reveal-soft mb-8 text-[12px] md:text-[13px] tracking-[0.5em] uppercase text-white/60"
+            {/* Chapter label */}
+            <p
+              className="reveal-soft mb-10 md:mb-12 text-[11px] tracking-[0.42em] uppercase text-[#0F172A]/60"
+              style={{
+                animationDelay: "0.35s",
+                fontFamily:
+                  "'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace",
+              }}
+            >
+              Product Thinking
+            </p>
+
+            {/* Headline — line by line */}
+            <h1 className="editorial-display text-[#0F172A] text-[10.5vw] md:text-[7.2vw] lg:text-[5.6vw] leading-[1.02]">
+              <span
+                className="reveal-line block"
+                style={{ animationDelay: "0.55s" }}
+              >
+                Every product begins
+              </span>
+              <span
+                className="reveal-line block"
+                style={{ animationDelay: "0.75s" }}
+              >
+                with a question.
+              </span>
+              <span
+                className="reveal-line block italic text-[#0F172A]/80"
+                style={{ animationDelay: "0.95s" }}
+              >
+                Mine always
+              </span>
+              <span
+                className="reveal-line block italic"
+                style={{ animationDelay: "1.15s", color: "#2563EB" }}
+              >
+                starts with people.
+              </span>
+            </h1>
+
+            {/* Supporting paragraph */}
+            <p
+              className="reveal-soft mt-10 md:mt-12 max-w-[660px] text-[16px] md:text-[17px] leading-[1.75] text-[#0F172A]/75 font-light"
+              style={{
+                animationDelay: "1.5s",
+                fontFamily: "'Inter', sans-serif",
+              }}
+            >
+              I don't believe the best products begin with features. I think
+              they begin with curiosity. Every project in this portfolio
+              started the same way — with a question, a conversation, and a
+              genuine attempt to understand people before building for them.
+            </p>
+
+            {/* Buttons */}
+            <div
+              className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5"
+            >
+              <a
+                href="#thinking"
+                className="reveal-soft inline-flex items-center justify-center px-8 py-4 bg-[#2563EB] text-white text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:bg-[#1d4ed8] hover:-translate-y-[1px] active:translate-y-0"
                 style={{
-                  animationDelay: "0.25s",
+                  animationDelay: "1.75s",
                   fontFamily: "'Inter', sans-serif",
                 }}
               >
-                UNDERSTANDING&nbsp;
-                <br />
-                COMES FIRST.
-                <br />
-                EVERYTHING ELSE IS EXECUTION.
-              </p>
-
-              <h1
-                className="reveal-line font-bold text-[18vw] md:text-[15vw] lg:text-[13vw] leading-[0.82] tracking-[-0.09em] text-white"
+                Start Reading
+              </a>
+              <a
+                href="#resume"
+                className="reveal-soft inline-flex items-center justify-center px-8 py-4 border border-[#0F172A]/25 text-[#0F172A] text-[13px] font-medium tracking-[0.04em] rounded-full transition-all duration-500 hover:border-[#0F172A] hover:bg-[#0F172A]/[0.03]"
                 style={{
-                  fontFamily: "'Syncopate', sans-serif",
-                  animationDelay: "0.4s",
-                }}
-              >
-                ANUBHAV
-              </h1>
-
-              <p
-                className="reveal-soft mt-10 max-w-xl text-[15px] md:text-[17px] leading-[1.55] text-white/80 font-light"
-                style={{
+                  animationDelay: "1.9s",
                   fontFamily: "'Inter', sans-serif",
-                  animationDelay: "1.0s",
                 }}
               >
-                Product-minded builder exploring storytelling through digital
-                products.
-              </p>
-
-              <p
-                className="reveal-soft mt-5 max-w-lg text-[13px] md:text-[14px] leading-[1.7] text-white/50 font-light"
-                style={{
-                  fontFamily: "'Inter', sans-serif",
-                  animationDelay: "1.15s",
-                }}
-              >
-                The best products are not built by jumping to solutions — they
-                begin with observation, curiosity, and clarity.
-              </p>
-
-              <div className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-10">
-                <a
-                  href="#thinking"
-                  className="reveal-soft group relative px-12 py-5 bg-white text-black text-[11px] font-bold uppercase tracking-[0.3em] transition-all duration-500 hover:bg-neutral-200 active:scale-[0.98]"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    animationDelay: "1.3s",
-                  }}
-                >
-                  Explore My Thinking
-                </a>
-
-                <a
-                  href="#work"
-                  className="reveal-soft text-[11px] font-medium uppercase tracking-[0.3em] text-white/60 hover:text-white transition-colors duration-500 border-b border-white/20 hover:border-white pb-1"
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    animationDelay: "1.4s",
-                  }}
-                >
-                  View Work
-                </a>
-              </div>
+                Download Résumé
+              </a>
             </div>
           </div>
 
+          {/* Right: Portrait — integrated, no card */}
+          <div className="hidden lg:block lg:col-span-4 relative h-full">
+            <div
+              className="reveal-portrait absolute inset-0 flex items-end justify-center"
+              style={{ animationDelay: "1.2s" }}
+            >
+              <img
+                src={portrait}
+                alt="Portrait of Anubhav"
+                className="w-full h-auto max-h-[78vh] object-contain object-bottom select-none"
+                style={{
+                  WebkitMaskImage:
+                    "radial-gradient(ellipse 85% 90% at 50% 55%, black 55%, transparent 95%)",
+                  maskImage:
+                    "radial-gradient(ellipse 85% 90% at 50% 55%, black 55%, transparent 95%)",
+                }}
+                draggable={false}
+              />
+            </div>
+          </div>
         </div>
 
-
-        {/* Footer Accents */}
+        {/* Scroll indicator */}
         <div
-          className="relative z-20 flex justify-between items-end border-t border-white/5 pt-8 reveal-soft"
+          className="reveal-soft relative z-20 mt-12 flex flex-col items-center gap-3"
           style={{
-            animationDelay: "1.5s",
+            animationDelay: "2.1s",
             fontFamily: "'Inter', sans-serif",
           }}
         >
-          <div className="flex flex-col gap-1">
-            <span className="text-[9px] tracking-[0.6em] text-white/40 uppercase font-bold">
-              Availability
-            </span>
-            <span className="text-[9px] tracking-[0.4em] text-white/20 uppercase">
-              2026 · Open to Product Roles
-            </span>
-          </div>
-          <div className="flex gap-6 items-center opacity-30">
-            <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center">
-              <div className="w-1 h-1 bg-white rounded-full animate-scroll-nudge" />
-            </div>
-            <span className="hidden md:inline text-[9px] tracking-[0.5em] text-white uppercase">
-              Scroll to dive
-            </span>
-          </div>
+          <span className="text-[11px] tracking-[0.32em] uppercase text-[#0F172A]/45">
+            Scroll to begin the first chapter
+          </span>
+          <span className="text-[#0F172A]/45 animate-scroll-nudge text-sm">
+            ↓
+          </span>
         </div>
-
       </div>
-    </div>
+    </section>
   );
 };
 
