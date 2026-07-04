@@ -237,12 +237,13 @@ const CraftRoots = () => {
           </Reveal>
 
           <Reveal delay={420}>
-            <div className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 border-t border-white/10 pt-10">
+            <div className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8 border-t border-white/10 pt-10">
               {[
                 { l: "Role", v: "Product Strategy · User Research · MVP Definition" },
                 { l: "Timeline", v: "Concept Stage" },
                 { l: "Project Type", v: "Marketplace Product Concept" },
                 { l: "Tools", v: "Research · Figma · No-code MVP Thinking · Product Documentation" },
+                { l: "Recognition", v: "Promising Startup Award — CAUSE 2026" },
               ].map((m) => (
                 <div key={m.l}>
                   <div
@@ -610,8 +611,23 @@ const CraftRoots = () => {
 
       <Divider />
 
-      {/* 10 — Documents */}
-      <Chapter number="10 — Documents & Research">
+      {/* 10 — Recognition */}
+      <Chapter number="10 — Recognition">
+        <SectionTitle>Promising Startup Award</SectionTitle>
+        <div className="max-w-[720px] border-t border-white/10 pt-10">
+          <p
+            className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.9]"
+            style={sans}
+          >
+            CraftRoots was recognized with the Promising Startup Award at CAUSE 2026 for its potential to create a sustainable experience-led marketplace connecting travelers and artisans.
+          </p>
+        </div>
+      </Chapter>
+
+      <Divider />
+
+      {/* 11 — Documents */}
+      <Chapter number="11 — Documents & Research">
         <SectionTitle>Documents Behind the Work</SectionTitle>
         <Body className="mb-16">
           A case study can only show part of the thinking. These documents contain the research, mapping, prioritization, and product decisions that shaped CraftRoots.
@@ -655,8 +671,8 @@ const CraftRoots = () => {
 
       <Divider />
 
-      {/* 11 — What I Learned */}
-      <Chapter number="11 — What I Learned">
+      {/* 12 — What I Learned */}
+      <Chapter number="12 — What I Learned">
         <SectionTitle>What CraftRoots changed in how I think.</SectionTitle>
         <div className="space-y-6 max-w-[680px]">
           <Body>
