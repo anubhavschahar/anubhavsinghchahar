@@ -847,7 +847,7 @@ const ReEarth = () => {
               className="text-[56px] md:text-[104px] leading-[0.95] font-light text-white mb-8"
               style={serif}
             >
-              Spotify Product Teardown
+              Subspace.money Product Teardown
             </h2>
           </Reveal>
           <Reveal delay={200}>
@@ -855,12 +855,12 @@ const ReEarth = () => {
               className="text-[20px] md:text-[28px] font-light italic text-white/70 leading-[1.35] mb-14 max-w-[720px]"
               style={serif}
             >
-              Understanding why Spotify keeps users coming back.
+              Finding the gap between product promise and product reality.
             </p>
           </Reveal>
           <Reveal delay={280}>
             <a
-              href="#spotify-teardown"
+              href="/work/subspace-teardown"
               className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
               style={sans}
             >
