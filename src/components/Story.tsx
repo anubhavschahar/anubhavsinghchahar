@@ -274,7 +274,7 @@ const Story = () => {
 
       {/* 3. Work I've Explored */}
       <Section id="work" eyebrow="CHAPTER II" title="Work I've Explored">
-        <div className="space-y-28 md:space-y-40 max-w-[860px]">
+        <div className="space-y-16 md:space-y-24 max-w-[860px]">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
               <article className={i % 2 === 1 ? "md:pl-32" : ""}>
@@ -319,7 +319,7 @@ const Story = () => {
 
       {/* 4. Writing */}
       <Section id="writing" eyebrow="CHAPTER III" title="Writing">
-        <div className="space-y-20 md:space-y-28 max-w-[720px]">
+        <div className="space-y-12 md:space-y-16 max-w-[720px]">
           {writings.map((quote, i) => (
             <Reveal key={i} delay={i * 120}>
               <blockquote className="relative pl-6 md:pl-10 border-l border-white/15">
@@ -351,7 +351,7 @@ const Story = () => {
       {/* 5. Final CTA */}
       <section
         id="contact"
-        className="relative w-full px-8 md:px-16 py-48 md:py-72"
+        className="relative w-full px-8 md:px-16 py-28 md:py-44"
         style={{ backgroundColor: "rgba(5,5,5,0.6)" }}
       >
         <div className="max-w-[900px] mx-auto">
@@ -365,7 +365,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={120}>
             <h2
-              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-10 max-w-[820px]"
+              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-8 max-w-[820px]"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
             >
               Let's build something meaningful.
@@ -373,7 +373,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={280}>
             <p
-              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-16"
+              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Open for Product / Internship opportunities.
@@ -398,7 +398,7 @@ const Story = () => {
             </div>
           </Reveal>
           <div
-            className="mt-40 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
+            className="mt-20 md:mt-24 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <span>Asc. — 2026</span>
