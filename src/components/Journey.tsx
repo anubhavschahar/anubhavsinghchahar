@@ -69,7 +69,7 @@ const leadership = [
   },
 ];
 
-type Cert = { title: string; issuer: string; href: string; inProgress?: boolean };
+type Cert = { title: string; issuer: string; href?: string; hrefs?: string[]; inProgress?: boolean };
 
 const certGroups: { title: string; items: Cert[] }[] = [
   {
@@ -78,27 +78,36 @@ const certGroups: { title: string; items: Cert[] }[] = [
       {
         title: "Product Management Job Simulation",
         issuer: "Electronic Arts via Forage",
-        href: "#certificate-ea",
+        href: "https://drive.google.com/file/d/1hcLeJdtYyQ1D-e6rp9sa2DaTcU0lBTGj/view?usp=sharing",
       },
       {
         title: "Product Management & Marketing Fundamentals",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-ipl-pmm",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/bjaqbddw5d",
+          "https://courses.productleadership.com/certificates/nriggdlhzu",
+        ],
       },
       {
         title: "Value Proposition Design & Innovation Frameworks",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-ipl-vpd",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/rioi7mbx13",
+          "https://courses.productleadership.com/certificates/3qfsiv9gfr",
+        ],
       },
       {
         title: "Business Analysis & Process Management",
         issuer: "Coursera",
-        href: "#certificate-coursera-ba",
+        href: "https://coursera.org/share/9c0045d8e47d16c79f28199cbe824233",
       },
       {
         title: "Presentation Zen, Storytelling & Creative Confidence",
         issuer: "Institute of Product Leadership",
-        href: "#certificate-presentation-zen",
+        hrefs: [
+          "https://courses.productleadership.com/certificates/snm6ffzqq0",
+          "https://courses.productleadership.com/certificates/lcgz6ayora",
+        ],
       },
     ],
   },
@@ -129,6 +138,7 @@ const certGroups: { title: string; items: Cert[] }[] = [
     ],
   },
 ];
+
 
 const Journey = () => {
   return (
