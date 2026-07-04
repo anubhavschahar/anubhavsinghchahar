@@ -864,7 +864,7 @@ const ThinkFloor = () => {
           </Reveal>
           <Reveal delay={280}>
             <a
-              href="#reearth"
+              href="/work/reearth"
               className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
               style={sans}
             >
