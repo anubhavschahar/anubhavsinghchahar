@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero";
 import Story from "@/components/Story";
-import portraitAsset from "@/assets/anubhav-photo-2.jpeg.asset.json";
 
-const portrait = portraitAsset.url;
+const portrait = "/hero-bg.jpg";
+
 
 const Index = () => {
   return (
