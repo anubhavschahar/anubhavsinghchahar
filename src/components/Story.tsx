@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import Journey from "./Journey";
 
 const thinkingBlocks = [
   {
