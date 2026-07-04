@@ -629,7 +629,7 @@ const CraftRoots = () => {
             CraftRoots was recognized with the Promising Startup Award at CAUSE 2026 for its potential to create a sustainable experience-led marketplace connecting travelers and artisans.
           </p>
           <a
-            href="#"
+            href="https://drive.google.com/file/d/14BjSKmIwTFTvxAowiYXjGFkYgNwfL01c/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
