@@ -174,7 +174,7 @@ const EndCredits = () => {
               className="text-[10px] tracking-[0.4em] uppercase text-white/25"
               style={sans}
             >
-              Asc. — 2026 · Fin.
+              {"\n"}
             </div>
           </div>
         </div>
