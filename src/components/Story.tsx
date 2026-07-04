@@ -575,64 +575,9 @@ const Story = () => {
 
       <SceneDivider />
 
-      {/* 6. Final CTA */}
-      <section
-        id="contact"
-        className="relative w-full px-8 md:px-16 py-28 md:py-44"
-        style={{ backgroundColor: "rgba(5,5,5,0.6)" }}
-      >
-        <div className="max-w-[900px] mx-auto">
-          <Reveal>
-            <div
-              className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              End Credits
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <h2
-              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-8 max-w-[820px]"
-              style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
-            >
-              Let's build something meaningful.
-            </h2>
-          </Reveal>
-          <Reveal delay={280}>
-            <p
-              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-10"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-            >
-              Open for Product / Internship opportunities.
-            </p>
-          </Reveal>
-          <Reveal delay={400}>
-            <div className="flex flex-wrap items-center gap-8 md:gap-12">
-              <a
-                href="mailto:hello@example.com"
-                className="text-[11px] tracking-[0.4em] uppercase text-black bg-white px-8 py-4 hover:bg-white/85 transition-all duration-500"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Contact Me
-              </a>
-              <a
-                href="#"
-                className="text-[11px] tracking-[0.4em] uppercase text-white/80 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
-              style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                View Resume →
-              </a>
-            </div>
-          </Reveal>
-          <div
-            className="mt-20 md:mt-24 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
-            style={{ fontFamily: "'Inter', sans-serif" }}
-          >
-            <span>Asc. — 2026</span>
-            <span>Fin.</span>
-          </div>
-        </div>
-      </section>
+      {/* 6. End Credits */}
+      <EndCredits />
+
     </div>
   );
 };
