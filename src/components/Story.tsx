@@ -485,8 +485,76 @@ const Story = () => {
             </article>
           </Reveal>
 
+          {/* Featured Chapter 04 — Subspace.money Product Teardown */}
+          <Reveal delay={200}>
+            <article className="relative border-t border-white/10 pt-14 md:pt-20 mt-24 md:mt-32">
+              <div
+                className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Featured Chapter 04
+              </div>
+              <h3
+                className="text-[48px] md:text-[80px] lg:text-[96px] leading-[0.95] font-light mb-8 text-white"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Subspace.money Product Teardown
+              </h3>
+              <p
+                className="text-[20px] md:text-[26px] leading-[1.35] font-light italic text-white/80 mb-10 max-w-[640px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Finding the gap between product promise and product reality.
+              </p>
+              <p
+                className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.85] mb-12 max-w-[620px]"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                A product teardown based on 48 hours of cross-platform testing across iPhone, Android, and Web, identifying activation gaps, platform parity issues, UX failures, and strategic opportunities.
+              </p>
 
-          <Reveal delay={220}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-14 max-w-[720px]">
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Role
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Product Analysis · UX Teardown · Competitive Research · Prioritization
+                  </p>
+                </div>
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Focus
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Activation · Platform Parity · Subscription Management · RICE Prioritization
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/work/subspace-teardown"
+                className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/85 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Read Chapter →
+              </a>
+            </article>
+          </Reveal>
+
+          <Reveal delay={240}>
             <div className="mt-24 md:mt-32 pt-10 border-t border-white/5 text-[10px] tracking-[0.4em] uppercase text-white/25"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
