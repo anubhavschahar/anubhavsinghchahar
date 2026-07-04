@@ -765,6 +765,8 @@ const ReEarth = () => {
             <Reveal key={d.title}>
               <a
                 href={d.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group block border-b border-white/10 px-2 md:px-8 py-10 md:py-14 hover:bg-white/[0.03] transition-colors duration-500"
               >
                 <div
