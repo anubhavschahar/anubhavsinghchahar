@@ -6,39 +6,39 @@ const portrait = portraitAsset.url;
 
 const Index = () => {
   return (
-    <main className="relative min-h-screen">
-      <Hero />
-
-      {/* Story section keeps the cinematic dark backdrop */}
-      <div className="relative bg-[#050505] text-white">
+    <main className="relative min-h-screen text-[#F5F5F5]">
+      {/* Fixed cinematic backdrop — never moves on scroll */}
+      <div
+        aria-hidden
+        className="fixed inset-0 -z-10 bg-[#0A0A0A] overflow-hidden pointer-events-none"
+      >
+        <img
+          src={portrait}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-[70%_center] select-none"
+          style={{
+            filter: "grayscale(100%) brightness(0.5) contrast(1.08)",
+            WebkitMaskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.9) 60%, rgba(0,0,0,1) 100%)",
+            maskImage:
+              "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.9) 60%, rgba(0,0,0,1) 100%)",
+          }}
+          draggable={false}
+        />
+        {/* Vertical vignette */}
         <div
-          aria-hidden
-          className="sticky top-0 h-screen w-full pointer-events-none overflow-hidden bg-[#050505]"
-          style={{ marginBottom: "-100vh" }}
-        >
-          <div className="absolute -bottom-[10%] -right-[8%] w-[95%] md:w-[70%] lg:w-[60%] xl:w-[55%] h-[120%]">
-            <img
-              src={portrait}
-              alt=""
-              className="absolute inset-0 w-full h-full object-contain object-bottom grayscale contrast-[1.15] brightness-[0.95]"
-              style={{
-                WebkitMaskImage:
-                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
-                maskImage:
-                  "radial-gradient(ellipse 70% 80% at 65% 55%, black 45%, transparent 92%)",
-              }}
-              draggable={false}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/30 to-transparent" />
-          </div>
-          <div className="absolute inset-0 opacity-70 bg-[radial-gradient(ellipse_at_center,transparent_0%,#000_100%)]" />
-        </div>
-
-        <div className="relative z-10">
-          <Story />
-        </div>
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0) 20%, rgba(10,10,10,0) 80%, rgba(10,10,10,0.9) 100%)",
+          }}
+        />
+        {/* Radial darken edges */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.55)_100%)]" />
       </div>
+
+      <Hero />
+      <Story />
     </main>
   );
 };
