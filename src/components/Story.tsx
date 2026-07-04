@@ -38,26 +38,6 @@ const thinkingBlocks = [
   },
 ];
 
-const projects = [
-  {
-    title: "Quiet Ledger",
-    insight: "A journaling tool for founders who think in questions, not tasks.",
-    impact:
-      "Taught me that structure is a form of empathy — the right prompt is worth more than a hundred features.",
-  },
-  {
-    title: "Marginalia",
-    insight: "A reading companion that turns highlights into a living index of your own mind.",
-    impact:
-      "Reminded me that the most personal products are the ones that refuse to perform for anyone else.",
-  },
-  {
-    title: "Slowmail",
-    insight: "An email client designed around intention instead of inbox count.",
-    impact:
-      "Showed me how much of modern software is anxiety in a nice font — and how much room there is to build the opposite.",
-  },
-];
 
 const writings = [
   "Poems are not finished when written. They are finished when read.",
