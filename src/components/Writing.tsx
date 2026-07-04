@@ -397,7 +397,7 @@ const Writing = () => {
                 className="inline-flex items-center gap-3 text-[11px] tracking-[0.35em] uppercase text-white/75 border border-white/20 px-5 py-2.5 hover:text-white hover:border-white/60 hover:bg-white/5 transition-all duration-500 group"
                 style={sans}
               >
-                <span>Follow on Instagram</span>
+                <span>Instagram</span>
                 <svg
                   className="w-3.5 h-3.5 text-white/50 group-hover:text-white transition-colors duration-300"
                   fill="none"
@@ -412,14 +412,6 @@ const Writing = () => {
                   />
                 </svg>
               </a>
-            </Reveal>
-            <Reveal delay={220}>
-              <span
-                className="text-[11px] tracking-[0.25em] uppercase text-white/30"
-                style={sans}
-              >
-                INSTAGRAM
-              </span>
             </Reveal>
           </div>
         </div>
