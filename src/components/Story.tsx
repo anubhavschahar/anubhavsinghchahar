@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import Journey from "./Journey";
 
 const thinkingBlocks = [
   {
@@ -567,8 +568,13 @@ const Story = () => {
 
       <SceneDivider />
 
-      {/* 4. Writing */}
-      <Section id="writing" eyebrow="CHAPTER III" title="Writing">
+      {/* 4. Journey */}
+      <Journey />
+
+      <SceneDivider />
+
+      {/* 5. Writing */}
+      <Section id="writing" eyebrow="CHAPTER IV" title="Writing">
         <div className="space-y-12 md:space-y-16 max-w-[720px]">
           {writings.map((quote, i) => (
             <Reveal key={i} delay={i * 120}>
