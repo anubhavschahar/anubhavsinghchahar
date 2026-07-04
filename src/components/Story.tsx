@@ -131,7 +131,7 @@ const Story = () => {
               className="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              Chapter I
+            Prelude
             </div>
           </Reveal>
           <Reveal delay={120}>
@@ -160,39 +160,120 @@ const Story = () => {
       <SceneDivider />
 
       {/* 2. Thinking */}
-      <Section id="thinking" eyebrow="Chapter II" title="Thinking">
-        <div className="space-y-24 md:space-y-32 max-w-[720px]">
-          {thinkingEntries.map((entry, i) => (
-            <Reveal key={entry.title} delay={i * 80}>
-              <article className="group">
-                <div
-                  className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-4"
+      <section
+        id="thinking"
+        className="relative w-full px-8 md:px-16 py-40 md:py-64"
+        style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
+      >
+        <div className="max-w-[1200px] mx-auto">
+          <Reveal>
+            <div
+              className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-8"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              CHAPTER I
+            </div>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2
+              className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+              style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
+            >
+              Thinking
+            </h2>
+          </Reveal>
+
+          <div className="max-w-[680px]">
+            <Reveal delay={160}>
+              <p
+                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-20 md:mb-28"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Every product decision is shaped by the way we see a problem. Over time, I've realized that the quality of my decisions depends less on having quick answers and more on asking better questions. These are the ideas I keep returning to whenever I explore a problem, conduct research, or make a decision.
+              </p>
+            </Reveal>
+
+            <Reveal delay={220}>
+              <h3
+                className="text-[28px] md:text-[40px] leading-[1.15] font-light italic text-white/90 mb-16 md:mb-24"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                The Way I Think
+              </h3>
+            </Reveal>
+
+            <div className="space-y-16 md:space-y-24">
+              {thinkingBlocks.map((block, i) => (
+                <Reveal key={block.title} delay={i * 80}>
+                  <article className={i > 0 ? "pt-16 md:pt-20 border-t border-white/10" : ""}>
+                    <h4
+                      className="text-[26px] md:text-[34px] leading-[1.15] font-light text-white/90 mb-6"
+                      style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                    >
+                      {block.title}
+                    </h4>
+                    <p
+                      className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] mb-8"
+                      style={{ fontFamily: "'Inter', sans-serif" }}
+                    >
+                      {block.body}
+                    </p>
+                    <div>
+                      <div
+                        className="text-[10px] tracking-[0.3em] uppercase text-white/30 mb-3"
+                        style={{ fontFamily: "'Inter', sans-serif" }}
+                      >
+                        From my notebook
+                      </div>
+                      <p
+                        className="text-[15px] md:text-[16px] font-light italic leading-[1.7] text-white/40"
+                        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+                      >
+                        “{block.notebook}”
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal delay={160}>
+              <div className="mt-32 md:mt-48 pt-16 md:pt-24 border-t border-white/10 text-center">
+                <p
+                  className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h3
-                  className="text-[28px] md:text-[36px] leading-[1.2] font-light mb-6 text-white/90"
+                  These ideas only matter when they're tested.
+                </p>
+                <p
+                  className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-10"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  The next chapter is where they became decisions.
+                </p>
+                <div
+                  className="text-[24px] md:text-[32px] text-white/30 font-light italic mb-10"
                   style={{ fontFamily: "'Cormorant Garamond', serif" }}
                 >
-                  {entry.title}
-                </h3>
-                <p
-                  className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85]"
+                  ↓
+                </div>
+                <a
+                  href="#work"
+                  className="inline-block text-[11px] tracking-[0.35em] uppercase text-white/75 border-b border-white/20 pb-1 hover:text-white hover:border-white/60 transition-all duration-500"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
-                  {entry.body}
-                </p>
-              </article>
+                  Chapter II — Selected Work
+                </a>
+              </div>
             </Reveal>
-          ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       <SceneDivider />
 
       {/* 3. Work I've Explored */}
-      <Section id="work" eyebrow="Chapter III" title="Work I've Explored">
+      <Section id="work" eyebrow="CHAPTER II" title="Work I've Explored">
         <div className="space-y-28 md:space-y-40 max-w-[860px]">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
@@ -237,7 +318,7 @@ const Story = () => {
       <SceneDivider />
 
       {/* 4. Writing */}
-      <Section id="writing" eyebrow="Chapter IV" title="Writing">
+      <Section id="writing" eyebrow="CHAPTER III" title="Writing">
         <div className="space-y-20 md:space-y-28 max-w-[720px]">
           {writings.map((quote, i) => (
             <Reveal key={i} delay={i * 120}>
