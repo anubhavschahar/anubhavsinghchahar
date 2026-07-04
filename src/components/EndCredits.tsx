@@ -132,7 +132,9 @@ const EndCredits = () => {
                   </span>
                 </a>
                 <a
-                  href="#padhalikhajaat"
+                  href="https://www.instagram.com/pdhalikhajaat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center text-[13px] md:text-[15px] tracking-[0.35em] uppercase text-white/50 hover:text-white transition-colors duration-500"
                   style={sans}
                 >
