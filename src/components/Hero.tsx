@@ -7,6 +7,7 @@ const navItems = [
   { label: "Journey", href: "#journey" },
   { label: "Writing", href: "#writing" },
   { label: "Resume", href: "#resume" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Hero = () => {
