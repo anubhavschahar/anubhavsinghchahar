@@ -162,7 +162,7 @@ const Story = () => {
       {/* 2. Thinking */}
       <section
         id="thinking"
-        className="relative w-full px-8 md:px-16 py-40 md:py-64"
+        className="relative w-full px-8 md:px-16 py-24 md:py-40"
         style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
       >
         <div className="max-w-[1200px] mx-auto">
@@ -176,7 +176,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={80}>
             <h2
-              className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+              className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-12 md:mb-20"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
             >
               Thinking
@@ -186,7 +186,7 @@ const Story = () => {
           <div className="max-w-[680px]">
             <Reveal delay={160}>
               <p
-                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-20 md:mb-28"
+                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-12 md:mb-16"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Every product decision is shaped by the way we see a problem. Over time, I've realized that the quality of my decisions depends less on having quick answers and more on asking better questions. These are the ideas I keep returning to whenever I explore a problem, conduct research, or make a decision.
@@ -195,17 +195,17 @@ const Story = () => {
 
             <Reveal delay={220}>
               <h3
-                className="text-[28px] md:text-[40px] leading-[1.15] font-light italic text-white/90 mb-16 md:mb-24"
+                className="text-[28px] md:text-[40px] leading-[1.15] font-light italic text-white/90 mb-10 md:mb-14"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 The Way I Think
               </h3>
             </Reveal>
 
-            <div className="space-y-16 md:space-y-24">
+            <div className="space-y-12 md:space-y-16">
               {thinkingBlocks.map((block, i) => (
                 <Reveal key={block.title} delay={i * 80}>
-                  <article className={i > 0 ? "pt-16 md:pt-20 border-t border-white/10" : ""}>
+                  <article className={i > 0 ? "pt-12 md:pt-16 border-t border-white/10" : ""}>
                     <h4
                       className="text-[26px] md:text-[34px] leading-[1.15] font-light text-white/90 mb-6"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -238,7 +238,7 @@ const Story = () => {
             </div>
 
             <Reveal delay={160}>
-              <div className="mt-32 md:mt-48 pt-16 md:pt-24 border-t border-white/10 text-center">
+              <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-center">
                 <p
                   className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
                   style={{ fontFamily: "'Inter', sans-serif" }}
