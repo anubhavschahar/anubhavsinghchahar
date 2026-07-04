@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Work", href: "#work" },
   { label: "Journey", href: "#journey" },
   { label: "Writing", href: "#writing" },
-  { label: "Resume", href: "#resume" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1Hifyt_7OanHQkaIsNgo09ZqNYz98wj4p/view?usp=sharing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -112,7 +112,9 @@ const EndCredits = () => {
                   </span>
                 </a>
                 <a
-                  href="#resume"
+                  href="https://drive.google.com/file/d/1Hifyt_7OanHQkaIsNgo09ZqNYz98wj4p/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center text-[13px] md:text-[15px] tracking-[0.35em] uppercase text-white/65 hover:text-white transition-colors duration-500"
                   style={sans}
                 >
