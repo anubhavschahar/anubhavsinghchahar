@@ -69,7 +69,7 @@ const writings = [
 const SceneDivider = () => (
   <div
     aria-hidden
-    className="pointer-events-none w-full h-56 md:h-72"
+    className="pointer-events-none w-full h-20 md:h-28"
     style={{
       background:
         "linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0) 100%)",
@@ -90,7 +90,7 @@ const Section = ({
 }) => (
   <section
     id={id}
-    className="relative w-full px-8 md:px-16 py-40 md:py-64"
+    className="relative w-full px-8 md:px-16 py-24 md:py-40"
     style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
   >
     <div className="max-w-[1200px] mx-auto">
@@ -106,7 +106,7 @@ const Section = ({
       )}
       <Reveal delay={80}>
         <h2
-          className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+          className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-12 md:mb-20"
           style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
         >
           {title}
@@ -122,7 +122,7 @@ const Story = () => {
     <div className="text-white">
       {/* 1. Start Reading — hero transition */}
       <section
-        className="relative w-full px-8 md:px-16 py-[10.8rem] md:py-[16.2rem]"
+        className="relative w-full px-8 md:px-16 py-24 md:py-40"
         style={{ backgroundColor: "rgba(5,5,5,0.35)" }}
       >
         <div className="max-w-[900px] mx-auto text-center">
