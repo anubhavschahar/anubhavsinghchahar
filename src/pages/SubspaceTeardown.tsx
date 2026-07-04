@@ -681,13 +681,25 @@ const SubspaceTeardown = () => {
             >
               Evidence — Redacted Screenshot
             </div>
-            <div className="aspect-[16/9] w-full border border-white/10 relative overflow-hidden bg-black">
+            <div className="w-full border border-white/10 relative overflow-hidden bg-black">
               <img
-                src={deletedAccountShot.url}
+                src="/assets/case-studies/subspace/deleted-account-payment-failure.png"
                 alt="Deleted-account payment failure screen — sensitive fields obscured."
-                className="w-full h-full object-cover object-top"
+                className="w-full max-w-5xl mx-auto object-contain"
                 loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  img.style.display = "none";
+                  const fallback = img.nextElementSibling as HTMLElement | null;
+                  if (fallback) fallback.style.display = "flex";
+                }}
               />
+              <div
+                className="hidden aspect-[16/9] w-full items-center justify-center text-[12px] tracking-[0.3em] uppercase text-white/40"
+                style={sans}
+              >
+                Screenshot unavailable
+              </div>
             </div>
             <div
               className="mt-4 text-[11px] text-white/50 font-light italic"
