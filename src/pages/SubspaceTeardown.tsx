@@ -225,7 +225,7 @@ const documents = [
     text:
       "The full Subspace.money teardown covering methodology, company context, five feedback areas, screenshots, product recommendations, RICE prioritization, and execution order.",
     cta: "View Report →",
-    href: "/__l5e/assets-v1/0d1c0682-bfac-4113-9b98-e6af4849d32a/Subspace-Teardown-Report.pdf",
+    href: "/documents/subspace-teardown-report.pdf",
   },
   {
     type: "Brief",
@@ -233,7 +233,7 @@ const documents = [
     text:
       "The original Product Intern Assignment brief outlining the task, evaluation criteria, product pillars, and expected feedback structure.",
     cta: "View Brief →",
-    href: "/__l5e/assets-v1/63df6e26-71c5-4abb-9cc0-6c836372810f/Assignment-Brief.pdf",
+    href: "/documents/subspace-assignment-brief.pdf",
   },
 ];
 
