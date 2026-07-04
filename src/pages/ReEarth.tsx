@@ -216,7 +216,7 @@ const documents = [
     text:
       "The original venture concept explaining the problem, value proposition, competitors, why-now framing, and ReEarth’s subscription-based compliance model.",
     cta: "View Deck →",
-    href: "#reearth-pitch",
+    href: "/__l5e/assets-v1/29b3cad7-2387-4f83-905d-264ecbeed0ea/ReEarth-Pitch-Deck.pptx",
   },
   {
     type: "Canvas",
@@ -224,7 +224,7 @@ const documents = [
     text:
       "The business model behind ReEarth, including key partners, value propositions, customer segments, channels, customer relationships, cost structure, and revenue streams.",
     cta: "View Canvas →",
-    href: "#reearth-bmc",
+    href: "/__l5e/assets-v1/aa39a11a-8add-4fad-9521-64710fd219ce/ReEarth-Business-Model-Canvas.pdf",
   },
   {
     type: "Research",
@@ -232,7 +232,7 @@ const documents = [
     text:
       "The interview question bank designed for compliance heads, company owners, PROs, and EPR providers.",
     cta: "Read Questions →",
-    href: "#reearth-questions",
+    href: "/__l5e/assets-v1/caf7b9e2-b890-48eb-be6f-92561a4188e2/ReEarth-Research-Questions.pdf",
   },
   {
     type: "Report",
@@ -240,7 +240,7 @@ const documents = [
     text:
       "The industry-level research report on India’s recycling and waste management sector, EPR systems, ESG pressures, risks, and digital traceability requirements.",
     cta: "Read Report →",
-    href: "#reearth-report",
+    href: "/__l5e/assets-v1/7d391d83-69fb-4ddb-bda9-f4098679073f/Sustainability-Practices-Report.pdf",
   },
 ];
 
@@ -765,6 +765,8 @@ const ReEarth = () => {
             <Reveal key={d.title}>
               <a
                 href={d.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group block border-b border-white/10 px-2 md:px-8 py-10 md:py-14 hover:bg-white/[0.03] transition-colors duration-500"
               >
                 <div
