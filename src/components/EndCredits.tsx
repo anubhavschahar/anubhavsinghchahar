@@ -6,7 +6,6 @@ const navLinks = [
   { label: "Work", href: "#work" },
   { label: "Journey", href: "#journey" },
   { label: "Writing", href: "#writing" },
-  { label: "Resume", href: "https://drive.google.com/file/d/1Hifyt_7OanHQkaIsNgo09ZqNYz98wj4p/view?usp=sharing" },
   { label: "Contact", href: "#contact" },
 ];
 
