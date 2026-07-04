@@ -10,9 +10,9 @@ const navItems = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full bg-transparent text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
+    <section className="relative min-h-[85vh] w-full bg-transparent text-[#F5F5F5] overflow-hidden selection:bg-[#2563EB] selection:text-white">
 
-      <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1440px] min-h-[85vh] flex flex-col px-6 md:px-12 lg:px-16 pt-8 md:pt-10 pb-10">
         {/* Navigation */}
         <nav
           className="relative z-50 flex items-center justify-between w-full reveal-soft"

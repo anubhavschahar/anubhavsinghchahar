@@ -69,7 +69,7 @@ const writings = [
 const SceneDivider = () => (
   <div
     aria-hidden
-    className="pointer-events-none w-full h-56 md:h-72"
+    className="pointer-events-none w-full h-20 md:h-28"
     style={{
       background:
         "linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,0.5) 50%, rgba(5,5,5,0) 100%)",
@@ -90,7 +90,7 @@ const Section = ({
 }) => (
   <section
     id={id}
-    className="relative w-full px-8 md:px-16 py-40 md:py-64"
+    className="relative w-full px-8 md:px-16 py-24 md:py-40"
     style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
   >
     <div className="max-w-[1200px] mx-auto">
@@ -106,7 +106,7 @@ const Section = ({
       )}
       <Reveal delay={80}>
         <h2
-          className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+          className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-12 md:mb-20"
           style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
         >
           {title}
@@ -122,7 +122,7 @@ const Story = () => {
     <div className="text-white">
       {/* 1. Start Reading — hero transition */}
       <section
-        className="relative w-full px-8 md:px-16 py-[10.8rem] md:py-[16.2rem]"
+        className="relative w-full px-8 md:px-16 py-24 md:py-40"
         style={{ backgroundColor: "rgba(5,5,5,0.35)" }}
       >
         <div className="max-w-[900px] mx-auto text-center">
@@ -162,7 +162,7 @@ const Story = () => {
       {/* 2. Thinking */}
       <section
         id="thinking"
-        className="relative w-full px-8 md:px-16 py-40 md:py-64"
+        className="relative w-full px-8 md:px-16 py-24 md:py-40"
         style={{ backgroundColor: "rgba(5,5,5,0.55)" }}
       >
         <div className="max-w-[1200px] mx-auto">
@@ -176,7 +176,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={80}>
             <h2
-              className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-20 md:mb-32"
+              className="text-[13vw] md:text-[8vw] lg:text-[6.5vw] leading-[0.95] tracking-tight font-light mb-12 md:mb-20"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
             >
               Thinking
@@ -186,7 +186,7 @@ const Story = () => {
           <div className="max-w-[680px]">
             <Reveal delay={160}>
               <p
-                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-20 md:mb-28"
+                className="text-[15px] md:text-[17px] text-white/55 font-light leading-[1.85] max-w-[640px] mb-12 md:mb-16"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 Every product decision is shaped by the way we see a problem. Over time, I've realized that the quality of my decisions depends less on having quick answers and more on asking better questions. These are the ideas I keep returning to whenever I explore a problem, conduct research, or make a decision.
@@ -195,17 +195,17 @@ const Story = () => {
 
             <Reveal delay={220}>
               <h3
-                className="text-[28px] md:text-[40px] leading-[1.15] font-light italic text-white/90 mb-16 md:mb-24"
+                className="text-[28px] md:text-[40px] leading-[1.15] font-light italic text-white/90 mb-10 md:mb-14"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 The Way I Think
               </h3>
             </Reveal>
 
-            <div className="space-y-16 md:space-y-24">
+            <div className="space-y-12 md:space-y-16">
               {thinkingBlocks.map((block, i) => (
                 <Reveal key={block.title} delay={i * 80}>
-                  <article className={i > 0 ? "pt-16 md:pt-20 border-t border-white/10" : ""}>
+                  <article className={i > 0 ? "pt-12 md:pt-16 border-t border-white/10" : ""}>
                     <h4
                       className="text-[26px] md:text-[34px] leading-[1.15] font-light text-white/90 mb-6"
                       style={{ fontFamily: "'Cormorant Garamond', serif" }}
@@ -238,7 +238,7 @@ const Story = () => {
             </div>
 
             <Reveal delay={160}>
-              <div className="mt-32 md:mt-48 pt-16 md:pt-24 border-t border-white/10 text-center">
+              <div className="mt-20 md:mt-28 pt-10 md:pt-14 border-t border-white/10 text-center">
                 <p
                   className="text-[16px] md:text-[18px] text-white/60 font-light leading-[1.8] mb-2"
                   style={{ fontFamily: "'Inter', sans-serif" }}
@@ -274,7 +274,7 @@ const Story = () => {
 
       {/* 3. Work I've Explored */}
       <Section id="work" eyebrow="CHAPTER II" title="Work I've Explored">
-        <div className="space-y-28 md:space-y-40 max-w-[860px]">
+        <div className="space-y-16 md:space-y-24 max-w-[860px]">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
               <article className={i % 2 === 1 ? "md:pl-32" : ""}>
@@ -319,7 +319,7 @@ const Story = () => {
 
       {/* 4. Writing */}
       <Section id="writing" eyebrow="CHAPTER III" title="Writing">
-        <div className="space-y-20 md:space-y-28 max-w-[720px]">
+        <div className="space-y-12 md:space-y-16 max-w-[720px]">
           {writings.map((quote, i) => (
             <Reveal key={i} delay={i * 120}>
               <blockquote className="relative pl-6 md:pl-10 border-l border-white/15">
@@ -351,7 +351,7 @@ const Story = () => {
       {/* 5. Final CTA */}
       <section
         id="contact"
-        className="relative w-full px-8 md:px-16 py-48 md:py-72"
+        className="relative w-full px-8 md:px-16 py-28 md:py-44"
         style={{ backgroundColor: "rgba(5,5,5,0.6)" }}
       >
         <div className="max-w-[900px] mx-auto">
@@ -365,7 +365,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={120}>
             <h2
-              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-10 max-w-[820px]"
+              className="text-[12vw] md:text-[6.5vw] leading-[1] tracking-tight font-light text-white mb-8 max-w-[820px]"
               style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic" }}
             >
               Let's build something meaningful.
@@ -373,7 +373,7 @@ const Story = () => {
           </Reveal>
           <Reveal delay={280}>
             <p
-              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-16"
+              className="text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[480px] mb-10"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Open for Product / Internship opportunities.
@@ -398,7 +398,7 @@ const Story = () => {
             </div>
           </Reveal>
           <div
-            className="mt-40 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
+            className="mt-20 md:mt-24 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <span>Asc. — 2026</span>
