@@ -258,13 +258,11 @@ const SubspaceTeardown = () => {
       {/* Top nav */}
       <div className="relative z-10 w-full px-6 md:px-16 pt-8 md:pt-10">
         <div className="max-w-[1100px] mx-auto flex items-center justify-between">
-          <Link
-            to="/"
+          <a
+            href="/#work"
             className="text-[11px] tracking-[0.4em] uppercase text-white/70 hover:text-white transition-colors duration-500"
             style={sans}
-          >
-            ← Back to Library
-          </Link>
+          >← Back to Library</a>
           <span
             className="text-[10px] tracking-[0.5em] uppercase text-white/30"
             style={sans}
@@ -826,9 +824,7 @@ const SubspaceTeardown = () => {
             className="mt-24 pt-10 border-t border-white/5 flex justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/25"
             style={sans}
           >
-            <Link to="/" className="hover:text-white/60 transition-colors duration-500">
-              ← Back to Library
-            </Link>
+            <a href="/#work" className="hover:text-white/60 transition-colors duration-500">← Back to Library</a>
             <span>Fin. — Chapter II · 04</span>
           </div>
         </div>
