@@ -294,10 +294,16 @@ const Story = () => {
                 Turning a bypassed craft town into a bookable experience.
               </p>
               <p
-                className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.85] mb-12 max-w-[620px]"
+                className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.85] mb-6 max-w-[620px]"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 CraftRoots is a product concept exploring how travellers could discover, trust, and participate in authentic artisan workshops — while helping artisans earn directly from their skills, not just finished products.
+              </p>
+              <p
+                className="text-[13px] md:text-[14px] text-white/45 font-light leading-[1.7] mb-12 max-w-[620px]"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Recognized with the Promising Startup Award at CAUSE 2026.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-14 max-w-[720px]">
