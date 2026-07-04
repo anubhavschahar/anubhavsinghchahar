@@ -147,11 +147,11 @@ const Story = () => {
               className="mt-10 text-[15px] md:text-[17px] text-white/50 font-light leading-[1.8] max-w-[540px] mx-auto"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              The pages ahead aren't meant to be skimmed.
+              Every product begins with a question.
               <br /><br />
-              They're a reflection of how I approach problems, learn from people, and make product decisions.
-              <br /><br />
-              If you're curious about how I think, you're in the right place.
+              The chapters ahead are my attempt to understand those questions through curiosity, conversations, and thoughtful decisions.
+              <br />
+              This is a record of how I'm learning to build products that matter.
             </p>
           </Reveal>
         </div>
