@@ -385,7 +385,7 @@ const Writing = () => {
                   className="text-[11px] tracking-[0.25em] uppercase text-white/30"
                   style={sans}
                 >
-                  INSTAGRAM LINK PLACEHOLDER
+                  INSTAGRAM
                 </span>
               </div>
             </Reveal>
