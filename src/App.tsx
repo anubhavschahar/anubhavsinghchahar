@@ -8,6 +8,7 @@ import CraftRoots from "./pages/CraftRoots.tsx";
 import ThinkFloor from "./pages/ThinkFloor.tsx";
 import ReEarth from "./pages/ReEarth.tsx";
 import SubspaceTeardown from "./pages/SubspaceTeardown.tsx";
+import ZentraHealth from "./pages/ZentraHealth.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
