@@ -8,6 +8,7 @@ import CraftRoots from "./pages/CraftRoots.tsx";
 import ThinkFloor from "./pages/ThinkFloor.tsx";
 import ReEarth from "./pages/ReEarth.tsx";
 import SubspaceTeardown from "./pages/SubspaceTeardown.tsx";
+import ZentraHealth from "./pages/ZentraHealth.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/work/thinkfloor" element={<ThinkFloor />} />
           <Route path="/work/reearth" element={<ReEarth />} />
           <Route path="/work/subspace-teardown" element={<SubspaceTeardown />} />
+          <Route path="/work/zentrahealth-competitive-advantage" element={<ZentraHealth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

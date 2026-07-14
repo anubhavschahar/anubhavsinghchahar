@@ -270,6 +270,81 @@ const Story = () => {
             </p>
           </Reveal>
 
+          {/* Featured Chapter 05 — ZentraHealth (Latest) */}
+          <Reveal delay={100}>
+            <article className="relative border-t border-white/10 pt-14 md:pt-20 mb-24 md:mb-32">
+              <div
+                className="text-[10px] tracking-[0.4em] uppercase text-white/30 mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Featured Chapter 05 · Latest
+              </div>
+              <div
+                className="text-[10px] tracking-[0.5em] uppercase text-white/40 mb-6"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                MBA Capstone · Product Strategy
+              </div>
+              <h3
+                className="text-[48px] md:text-[80px] lg:text-[96px] leading-[0.95] font-light mb-8 text-white"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                Building a Defensible Advantage in Digital Health
+              </h3>
+              <p
+                className="text-[20px] md:text-[26px] leading-[1.35] font-light italic text-white/80 mb-10 max-w-[720px]"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                ZentraHealth Technologies — Competitive Advantage Case Study.
+              </p>
+              <p
+                className="text-[15px] md:text-[17px] text-white/60 font-light leading-[1.85] mb-12 max-w-[640px]"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                A strategic product case study examining why a ₹68 Cr digital-health platform had valuable assets but no sustainable moat—and how it could transform its health data, mental-health offering, clinical network, and enterprise relationships into a defensible growth system.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-14 max-w-[720px]">
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Role
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Product Strategy · Competitive Analysis · VRIO · Value Chain
+                  </p>
+                </div>
+                <div>
+                  <div
+                    className="text-[10px] tracking-[0.35em] uppercase text-white/30 mb-3"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Focus
+                  </div>
+                  <p
+                    className="text-[14px] md:text-[15px] text-white/70 font-light leading-[1.7]"
+                    style={{ fontFamily: "'Inter', sans-serif" }}
+                  >
+                    Digital Health · Enterprise Wellness · Strategic Moat Design
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/work/zentrahealth-competitive-advantage"
+                className="inline-block text-[11px] tracking-[0.4em] uppercase text-white/85 border-b border-white/25 pb-1 hover:text-white hover:border-white/70 transition-all duration-500"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Explore the case study →
+              </a>
+            </article>
+          </Reveal>
+
           {/* Featured Chapter 01 — CraftRoots */}
           <Reveal delay={120}>
             <article className="relative border-t border-white/10 pt-14 md:pt-20">
