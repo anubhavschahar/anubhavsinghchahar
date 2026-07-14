@@ -29,6 +29,7 @@ const App = () => (
           <Route path="/work/thinkfloor" element={<ThinkFloor />} />
           <Route path="/work/reearth" element={<ReEarth />} />
           <Route path="/work/subspace-teardown" element={<SubspaceTeardown />} />
+          <Route path="/work/zentrahealth-competitive-advantage" element={<ZentraHealth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
